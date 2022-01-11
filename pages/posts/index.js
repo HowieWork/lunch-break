@@ -1,3 +1,3 @@
-function AllPostsPage() {}
+const AllPostsPage = () => {};
 
 export default AllPostsPage;

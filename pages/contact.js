@@ -1,3 +1,3 @@
-function ContactPage() {}
+const ContactPage = () => {};
 
 export default ContactPage;

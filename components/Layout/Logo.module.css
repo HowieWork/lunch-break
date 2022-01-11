@@ -1,0 +1,16 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--tiny-gap);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--font-color);
+}
+
+.logo-image {
+  font-size: 1.8rem;
+  color: var(--font-color);
+}

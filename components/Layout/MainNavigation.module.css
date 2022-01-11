@@ -1,0 +1,94 @@
+.header-container {
+  width: 24vw;
+
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo-container {
+  height: 10vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 3.2rem;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+}
+
+/* SEARCH BAR */
+.search-container {
+  height: 5vh;
+  padding: 0 3.2rem;
+}
+
+.search-container div {
+  height: 100%;
+  border: solid var(--font-color--secondary) 1px;
+  border-radius: 0.6rem;
+}
+
+/* NAVIGATION */
+.nav-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  font-size: 1.6rem;
+}
+
+.nav-container li {
+  list-style: none;
+}
+
+.nav-container li:hover {
+  background-color: var(--font-color);
+  color: var(--background-color);
+}
+
+.nav-subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-subcontainer li {
+  display: flex;
+  gap: 2rem;
+  padding: 0.8rem 3.2rem;
+}
+
+.nav-subcontainer a {
+  color: inherit;
+}
+
+.nav-subcontainer svg {
+  font-size: 2rem;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  opacity: 60%;
+  padding: 1rem 3.2rem;
+}
+
+/* CTA */
+.cta-container {
+  height: 10vh;
+  width: 100%;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
