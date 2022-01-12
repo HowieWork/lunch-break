@@ -1,0 +1,11 @@
+.image {
+  border-radius: 0.6rem;
+
+  overflow: hidden;
+
+  margin-bottom: 1.2rem;
+}
+
+.title {
+  font-size: 3.2rem;
+}

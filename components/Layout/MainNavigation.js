@@ -48,7 +48,7 @@ const MainNavigation = () => {
           <div className={classes['nav-subcontainer']}>
             <li>
               <MdOutlineGridView />
-              <Link href='/posts/design'>All posts</Link>
+              <Link href='/posts'>All posts</Link>
             </li>
           </div>
           {/* 2. FEATURED: DESIGN & PSYCHOLOGY */}
@@ -56,11 +56,11 @@ const MainNavigation = () => {
             <div className={classes['nav-title']}>Featured</div>
             <li>
               <MdBrush />
-              <Link href='/'>Design</Link>
+              <Link href='/posts/design'>Design</Link>
             </li>
             <li>
               <MdPsychology />
-              <Link href='/'>Psychology</Link>
+              <Link href='/posts/psychology'>Psychology</Link>
             </li>
           </div>
 

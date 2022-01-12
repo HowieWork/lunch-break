@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.side-bar-container {
+  width: 8%;
+  height: auto;
+  outline: solid 1px var(--font-color);
+  border-radius: 0.6rem;
+}
+
+.post-container {
+  width: 100%;
+}

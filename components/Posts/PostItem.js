@@ -12,6 +12,7 @@ const PostItem = (props) => {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
+    timeZone: 'UTC',
   });
 
   // IMAGE FILE PATH
