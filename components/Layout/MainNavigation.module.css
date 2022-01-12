@@ -1,11 +1,14 @@
 .header-container {
   width: 24vw;
+  height: 100%;
 
   box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  position: fixed;
 }
 
 /* LOGO */
@@ -47,6 +50,8 @@
 
 .nav-container li {
   list-style: none;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-container li:hover {

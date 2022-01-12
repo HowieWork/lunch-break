@@ -1,0 +1,35 @@
+.post {
+  list-style: none;
+}
+
+.post a {
+  color: inherit;
+}
+
+.image {
+  border-radius: 0.6rem;
+
+  overflow: hidden;
+
+  margin-bottom: 1.2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 0.8rem;
+}
+
+.content h3 {
+  font-size: 2rem;
+}
+
+.content time {
+  font-size: 1.2rem;
+}
+
+.content p {
+  font-size: 1.4rem;
+  color: var(--font-color--secondary);
+}

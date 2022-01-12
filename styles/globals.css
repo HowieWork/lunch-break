@@ -68,6 +68,8 @@ body {
 
   display: block;
   background: var(--background-color);
+
+  overflow-x: hidden;
 }
 
 input,

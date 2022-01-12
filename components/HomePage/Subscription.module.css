@@ -1,0 +1,17 @@
+.section-sub {
+  width: 80%;
+  margin-bottom: 4.8rem;
+}
+
+.section-sub h2 {
+  font-size: 1.8rem;
+}
+
+.section-sub div {
+  padding: 2.4rem;
+  height: 9.6rem;
+
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
+  border-radius: 0.6rem;
+  border: solid 1px var(--font-color);
+}

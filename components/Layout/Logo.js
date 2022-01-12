@@ -16,6 +16,7 @@ const Logo = () => {
       /> */}
       <MdLunchDining className={classes['logo-image']} />
       <h1 className={classes['logo-text']}>Lunch Break</h1>
+      <span>BETA</span>
     </div>
   );
 };

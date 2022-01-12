@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import Logo from './Logo';
+import Footer from './Footer';
 
 import {
   MdBrush,
   MdPsychology,
-  MdCallMade,
   MdOutlineGridView,
   MdHouse,
   MdWork,
   MdOutlineHelp,
   MdOutlineSearch,
+  MdDevicesOther,
 } from 'react-icons/md';
 
 import classes from './MainNavigation.module.css';
@@ -24,6 +25,7 @@ const MainNavigation = () => {
             <Logo />
           </a>
         </Link>
+
         <div className={classes['logo-text']}>
           A blog site focus on work-life balance.
         </div>
@@ -35,14 +37,21 @@ const MainNavigation = () => {
           <span>
             <MdOutlineSearch size='1.6rem' />
           </span>
-          SEARCH BAR
+          SEARCH BLOG
         </div>
       </div>
 
       {/* C - NAVIGATION */}
       <nav className={classes['nav-container']}>
         <ul>
-          {/* 1. FEATURED: DESIGN & PSYCHOLOGY */}
+          {/* 1. ALL POSTS */}
+          <div className={classes['nav-subcontainer']}>
+            <li>
+              <MdOutlineGridView />
+              <Link href='/posts/design'>All posts</Link>
+            </li>
+          </div>
+          {/* 2. FEATURED: DESIGN & PSYCHOLOGY */}
           <div className={classes['nav-subcontainer']}>
             <div className={classes['nav-title']}>Featured</div>
             <li>
@@ -55,33 +64,25 @@ const MainNavigation = () => {
             </li>
           </div>
 
-          {/* 2. DESIGN: ALL POSTS, HOME, OFFICE */}
+          {/* 3. DESIGN: HOME, OFFICE */}
           <div className={classes['nav-subcontainer']}>
             <div className={classes['nav-title']}>Design</div>
-            <li>
-              <MdOutlineGridView />
-              <Link href='/posts/design'>All posts</Link>
-            </li>
             <li>
               <MdHouse />
               <Link href='/posts/design/home'>Home</Link>
             </li>
             <li>
               <MdWork />
-              <Link href='/posts/design/office'>Office</Link>
+              <Link href='/posts/design/office'>Office | Workplace</Link>
             </li>
           </div>
 
-          {/* 3. PSYCHOLOGY: ALL POSTS, DESIGN */}
+          {/* 3. PSYCHOLOGY: DESIGN */}
           <div className={classes['nav-subcontainer']}>
             <div className={classes['nav-title']}>Psychology</div>
             <li>
-              <MdOutlineGridView />
-              <Link href='/'>All posts</Link>
-            </li>
-            <li>
-              <MdBrush />
-              <Link href='/'>Design</Link>
+              <MdDevicesOther />
+              <Link href='/'>Design & Develop Series</Link>
             </li>
           </div>
 
@@ -92,14 +93,6 @@ const MainNavigation = () => {
               <MdOutlineHelp />
               <Link href='/contact'>Get help</Link>
             </li>
-            <li>
-              <Link href='/'>
-                <a>
-                  Discord
-                  <MdCallMade />
-                </a>
-              </Link>
-            </li>
           </div>
         </ul>
       </nav>
@@ -108,6 +101,9 @@ const MainNavigation = () => {
       <div className={classes['cta-container']}>
         <span>Sign in</span> | <span>Join us</span>
       </div>
+
+      {/* E - FOOTER */}
+      <Footer />
     </header>
   );
 };
