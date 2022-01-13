@@ -1,0 +1,35 @@
+.contact {
+  width: 75%;
+  margin: auto;
+
+  font-size: 1.6rem;
+}
+
+.contact h1 {
+  font-size: 2.4rem;
+
+  margin-bottom: 2.4rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.actions button {
+  cursor: pointer;
+
+  font: inherit;
+  font-weight: 500;
+
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--font-color);
+  border-radius: 0.4rem;
+}
