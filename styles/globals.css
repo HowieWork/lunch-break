@@ -23,6 +23,10 @@
   --background-color: #fafafa;
   --nav-background-color: 250, 250, 250;
 
+  --pending-color: #2c4a73;
+  --success-color: #7bb87b;
+  --error-color: #ff7675;
+
   /* TYPOGRAPHY */
   --font-color: #252422;
   --font-color--secondary: #403d39;
