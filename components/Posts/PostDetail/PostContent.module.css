@@ -12,5 +12,25 @@
 }
 
 .post-container {
-  width: 100%;
+  width: 75%;
+  margin: auto;
+
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.post-container h2 {
+  font-size: 2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.post-container ul {
+  margin-top: 1.6rem;
+  margin-left: 2.4rem;
+}
+
+.post-container .image {
+  text-align: center;
+  margin: 1.6rem 0;
 }

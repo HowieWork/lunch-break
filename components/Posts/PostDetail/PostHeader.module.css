@@ -8,4 +8,10 @@
 
 .title {
   font-size: 3.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.date-duration {
+  font-size: 1.2rem;
+  margin-bottom: 2.4rem;
 }

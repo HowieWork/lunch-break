@@ -3,7 +3,16 @@ import Image from 'next/image';
 import classes from './PostHeader.module.css';
 
 const PostHeader = (props) => {
-  const { title, image } = props;
+  // EXTRACT POST HEADER INFO
+  const { title, image, date, duration } = props;
+
+  // FORMAT DATE
+  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
 
   return (
     <header>
@@ -19,7 +28,11 @@ const PostHeader = (props) => {
         />
       </div>
       {/* POST TITLE */}
-      <h1 className={classes['title']}>{title}</h1>
+      <h1 className={classes.title}>{title}</h1>
+      {/* DATE AND DURATION */}
+      <div className={classes['date-duration']}>
+        {formattedDate} | {duration}
+      </div>
     </header>
   );
 };
