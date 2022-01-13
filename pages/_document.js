@@ -8,6 +8,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          {/* FOR REACT PORTALS */}
+          <div id='notifications'></div>
         </body>
       </Html>
     );

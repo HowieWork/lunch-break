@@ -15,11 +15,12 @@ const Notification = (props) => {
     statusClasses = classes.error;
   }
 
-  return (
+  return ReactDOM.createPortal(
     <div className={`${classes.notification} ${statusClasses}`}>
       <h2>{title}</h2>
       <p>{message}</p>
-    </div>
+    </div>,
+    document.getElementById('notifications')
   );
 };
 
