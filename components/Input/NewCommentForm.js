@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import Notification from '../UI/Notification';
 
-import classes from './ContactForm.module.css';
+import classes from './NewCommentForm.module.css';
 
-const sendContentData = async (contactDetail) => {
-  const response = await fetch('/api/contact', {
+const sendCommentData = async (commentData) => {
+  const response = await fetch(`/api/comments/${commentData.postId}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(contactDetail),
+    body: JSON.stringify(commentData),
   });
 
   const data = await response.json();
@@ -20,28 +21,36 @@ const sendContentData = async (contactDetail) => {
   }
 };
 
-const ContactForm = () => {
+const NewCommentForm = () => {
+  // router.query.slug
+  const router = useRouter();
+  const postId = router.query.slug;
+
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredName, setEnteredName] = useState('');
-  const [enteredMessage, setEnteredMessage] = useState('');
+  const [enteredCommentDetail, setEnteredCommentDetail] = useState('');
+
   const [requestStatus, setRequestStatus] = useState();
   const [requestError, setRequestError] = useState();
 
-  const sendMessageHandler = async (event) => {
+  // SUBMIT FORM
+  const sendCommentHandler = async (event) => {
     event.preventDefault();
 
     setRequestStatus('pending');
 
     try {
-      await sendContentData({
+      await sendCommentData({
+        postId: postId,
         email: enteredEmail,
         name: enteredName,
-        message: enteredMessage,
+        commentDetail: enteredCommentDetail,
+        date: new Date().toISOString(),
       });
       setRequestStatus('success');
       setEnteredEmail('');
       setEnteredName('');
-      setEnteredMessage('');
+      setEnteredCommentDetail('');
     } catch (error) {
       setRequestError(error.message);
       setRequestStatus('error');
@@ -54,8 +63,8 @@ const ContactForm = () => {
   if (requestStatus === 'pending') {
     notification = {
       status: 'pending',
-      title: 'Sending message...',
-      message: 'Your message is on its way!',
+      title: 'Sending comment...',
+      message: 'Your comment is on its way!',
     };
   }
 
@@ -63,7 +72,7 @@ const ContactForm = () => {
     notification = {
       status: 'success',
       title: 'Success!',
-      message: 'Message sent successfully!',
+      message: 'Comment sent successfully!',
     };
   }
 
@@ -88,42 +97,47 @@ const ContactForm = () => {
   }, [requestStatus]);
 
   return (
-    <section className={classes.contact}>
-      <h1>How can I help you?</h1>
-      <form className={classes.form} onSubmit={sendMessageHandler}>
+    <div>
+      <form className={classes.form} onSubmit={sendCommentHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>
             <label htmlFor='email'>Your email</label>
             <input
-              type='email'
               id='email'
-              required
+              type='email'
               value={enteredEmail}
-              onChange={(event) => setEnteredEmail(event.target.value)}
+              onChange={(event) => {
+                setEnteredEmail(event.target.value);
+              }}
+              required
             />
           </div>
           <div className={classes.control}>
             <label htmlFor='name'>Your name</label>
             <input
-              type='text'
               id='name'
-              required
+              type='text'
               value={enteredName}
-              onChange={(event) => setEnteredName(event.target.value)}
+              onChange={(event) => {
+                setEnteredName(event.target.value);
+              }}
+              required
             />
           </div>
           <div className={classes.control}>
-            <label htmlFor='message'>Message</label>
+            <label htmlFor='commentDetail'>Comment</label>
             <textarea
-              id='message'
-              rows='6'
+              id='commentDetail'
+              row='5'
+              value={enteredCommentDetail}
+              onChange={(event) => {
+                setEnteredCommentDetail(event.target.value);
+              }}
               required
-              value={enteredMessage}
-              onChange={(event) => setEnteredMessage(event.target.value)}
-            ></textarea>
+            />
           </div>
           <div className={classes.actions}>
-            <button type='submit'>Send message</button>
+            <button type='submit'>Submit</button>
           </div>
         </div>
       </form>
@@ -134,8 +148,8 @@ const ContactForm = () => {
           message={notification.message}
         />
       )}
-    </section>
+    </div>
   );
 };
 
-export default ContactForm;
+export default NewCommentForm;

@@ -2,8 +2,10 @@ import { MongoClient } from 'mongodb';
 
 const handler = async (req, res) => {
   if (req.method === 'POST') {
+    // GET INPUT
     const { email, name, message } = req.body;
 
+    // VALIDATE INPUT
     if (
       !email ||
       !email.includes('@') ||
@@ -31,9 +33,10 @@ const handler = async (req, res) => {
       return;
     }
 
-    // CONNECT TO DATABASE
+    // GET DATABASE
     const db = client.db();
 
+    // INSERT DOCUMENT TO COLLECTIONS
     try {
       const result = await db.collection('messages').insertOne(newMessage);
       // ADD THE SAME INSERTED ID TO NEWMESSAGE
