@@ -7,7 +7,7 @@ const MyApp = ({ Component, pageProps }) => {
     <Layout>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        {/* TODO ADD FAV ICON */}
+        <link rel='icon' href='/images/site/favicon.png' />
       </Head>
       <Component {...pageProps} />
     </Layout>
