@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 
 import Hero from '../components/HomePage/Hero';
-import Subscription from '../components/HomePage/Subscription';
+import SubscriptionForm from '../components/Input/SubscriptionForm';
 import FeaturedPosts from '../components/HomePage/FeaturedPosts';
 
 import { getAllFeaturedPosts } from '../lib/posts-util';
@@ -17,8 +17,11 @@ const HomePage = (props) => {
           content='A blog site focusing on work-life balance. Its content is around three topics: design, psychology and community.'
         />
       </Head>
+      {/* INTRO OF WEBSITE */}
       <Hero />
-      <Subscription />
+      {/* NEWSLETTER SUBSCRIPTION */}
+      <SubscriptionForm />
+      {/* FEATURED POSTS */}
       <FeaturedPosts posts={props.posts} />
     </Fragment>
   );

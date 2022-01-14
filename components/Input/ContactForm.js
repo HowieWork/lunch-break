@@ -7,10 +7,10 @@ import classes from './ContactForm.module.css';
 const sendContentData = async (contactDetail) => {
   const response = await fetch('/api/contact', {
     method: 'POST',
-    body: JSON.stringify(contactDetail),
     headers: {
       'Content-Type': 'application/json',
     },
+    body: JSON.stringify(contactDetail),
   });
 
   const data = await response.json();
@@ -26,17 +26,6 @@ const ContactForm = () => {
   const [enteredMessage, setEnteredMessage] = useState('');
   const [requestStatus, setRequestStatus] = useState();
   const [requestError, setRequestError] = useState();
-
-  useEffect(() => {
-    if (requestStatus === 'success' || requestStatus === 'error') {
-      const timer = setTimeout(() => {
-        setRequestStatus(null);
-        setRequestError(null);
-      }, 3000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [requestStatus]);
 
   const sendMessageHandler = async (event) => {
     event.preventDefault();
@@ -84,6 +73,17 @@ const ContactForm = () => {
       message: requestError,
     };
   }
+
+  useEffect(() => {
+    if (requestStatus === 'success' || requestStatus === 'error') {
+      const timer = setTimeout(() => {
+        setRequestStatus(null);
+        setRequestError(null);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [requestStatus]);
 
   return (
     <section className={classes.contact}>

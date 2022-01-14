@@ -21,7 +21,7 @@
   --secondary-color-shade--90: #000306;
 
   --background-color: #fafafa;
-  --nav-background-color: 250, 250, 250;
+  --background-color--rgb: 250, 250, 250;
 
   --pending-color: #2c4a73;
   --success-color: #7bb87b;
@@ -29,6 +29,7 @@
 
   /* TYPOGRAPHY */
   --font-color: #252422;
+  --font-color--rgb: 37, 36, 34;
   --font-color--secondary: #403d39;
 
   /* SPACING */
@@ -47,6 +48,7 @@
 .dark-theme {
   --background-color: #031423;
   --font-color: #d6def8;
+  --font-color--rgb: 214, 222, 248;
   --font-color--secondary: #969bae;
 }
 
