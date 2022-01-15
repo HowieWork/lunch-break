@@ -62,13 +62,6 @@ const handler = async (req, res) => {
   // 2) GET COMMENTS
   if (req.method === 'GET') {
     // GET DATABASE
-    // const db = client.db();
-
-    // const documents = await db
-    //   .collection('comments')
-    //   .find({ postId: postId })
-    //   .sort({ _id: -1 })
-    //   .toArray();
     try {
       const documents = await getAllDocuments(
         client,

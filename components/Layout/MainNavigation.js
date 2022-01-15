@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useSession, signOut } from 'next-auth/client';
+
 import Logo from './Logo';
 import Footer from './Footer';
 
@@ -14,8 +16,15 @@ import {
 } from 'react-icons/md';
 
 import classes from './MainNavigation.module.css';
+import { Fragment } from 'react';
 
 const MainNavigation = () => {
+  const [session, loading] = useSession();
+
+  const logoutHandler = () => {
+    signOut();
+  };
+
   return (
     <header className={classes['header-container']}>
       {/* A - SITE LOGO */}
@@ -94,13 +103,33 @@ const MainNavigation = () => {
               <Link href='/contact'>Get help</Link>
             </li>
           </div>
+          {/* 5. CTA */}
+          <div className={classes['cta-container']}>
+            {!session && !loading && (
+              <Fragment>
+                <li>
+                  <Link href='/auth'>Sign in</Link>
+                </li>
+                <span> | </span>
+                <li>
+                  <Link href='/auth'>Join us</Link>
+                </li>
+              </Fragment>
+            )}
+            {session && (
+              <Fragment>
+                <li>
+                  <Link href='/profile'>Profile</Link>
+                </li>
+                <span> | </span>
+                <li>
+                  <button onClick={logoutHandler}>Log out</button>
+                </li>
+              </Fragment>
+            )}
+          </div>
         </ul>
       </nav>
-
-      {/* D - CTA */}
-      <div className={classes['cta-container']}>
-        <span>Sign in</span> | <span>Join us</span>
-      </div>
 
       {/* E - FOOTER */}
       <Footer />
