@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 
 import Hero from '../components/HomePage/Hero';
-import SubscriptionForm from '../components/Input/SubscriptionForm';
+import SubscriptionForm from '../components/Forms/SubscriptionForm';
 import FeaturedPosts from '../components/HomePage/FeaturedPosts';
 
 import { getAllFeaturedPosts } from '../lib/posts-util';

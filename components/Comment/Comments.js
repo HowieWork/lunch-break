@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import NewCommentForm from '../Input/NewCommentForm';
+import NewCommentForm from '../Forms/NewCommentForm';
 import CommentList from './CommentList';
 
 const Comments = (props) => {
@@ -11,7 +11,7 @@ const Comments = (props) => {
 
   // HANDLING TOGGLE SHOW COMMENTS BUTTON
   const toggleShowCommentsHandler = () => {
-    setIsShowComments(!isShowComments);
+    setIsShowComments((prevState) => !prevState);
   };
 
   // HANDLING WRITE COMMENT BUTTON
