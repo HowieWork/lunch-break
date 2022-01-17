@@ -2,7 +2,7 @@ import { Provider } from 'next-auth/client';
 
 import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
-import Notification from '../components/UI/Notification';
+
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => {

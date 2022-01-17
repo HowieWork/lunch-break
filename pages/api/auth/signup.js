@@ -7,18 +7,22 @@ const handler = async (req, res) => {
   }
 
   // 1. GET REQUEST DATA
-  const { email, password } = req.body;
+  const { email, name, password } = req.body;
 
   // 2. VALIDATE DATA
   // CHECK IF DATA IS VALID
+
   if (
     !email ||
     !email.includes('@') ||
+    !name ||
+    name.trim().length < 0 ||
     !password ||
     password.trim().length < 6
   ) {
     res.status(422).json({
-      message: 'Invalid data. Password should be at least 6 characters.',
+      message:
+        'Invalid data. Note: Name should not be empty. Password should be at least 6 characters.',
     });
     client.close();
     return;
@@ -49,6 +53,7 @@ const handler = async (req, res) => {
   const hashedPassword = await hashPassword(password);
   const newUser = {
     email: email,
+    name: name,
     password: hashedPassword,
   };
 

@@ -22,7 +22,7 @@ const sendCommentData = async (commentData) => {
 };
 
 const NewCommentForm = (props) => {
-  const { name, email } = props.user;
+  const { email, name } = props.user;
 
   // router.query.slug
   const router = useRouter();

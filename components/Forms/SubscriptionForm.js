@@ -66,6 +66,7 @@ const SubscriptionForm = () => {
     };
   }
 
+  // CLEAR NOTIFICATION
   useEffect(() => {
     if (requestStatus === 'success' || requestStatus === 'error') {
       const timer = setTimeout(() => {

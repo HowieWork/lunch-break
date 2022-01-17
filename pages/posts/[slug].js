@@ -9,8 +9,8 @@ import { getPostsFiles, getPostData } from '../../lib/posts-util';
 
 const PostDetailPage = (props) => {
   const [session, loading] = useSession();
-  const [user, setUser] = useState();
 
+  const [user, setUser] = useState();
   const [comments, setComments] = useState();
 
   // router.query.slug

@@ -4,7 +4,7 @@ import { signIn } from 'next-auth/client';
 
 import classes from './AuthForm.module.css';
 
-const createUser = async (email, password) => {
+const createUser = async (email, name, password) => {
   const response = await fetch('/api/auth/signup', {
     method: 'POST',
     headers: {
@@ -12,6 +12,7 @@ const createUser = async (email, password) => {
     },
     body: JSON.stringify({
       email,
+      name,
       password,
     }),
   });
@@ -28,6 +29,7 @@ const createUser = async (email, password) => {
 const AuthForm = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
+  const nameInputRef = useRef();
 
   const [isLogin, setIsLogin] = useState(false);
   const router = useRouter();
@@ -40,6 +42,7 @@ const AuthForm = () => {
     event.preventDefault();
 
     const enteredEmail = emailInputRef.current.value;
+
     const enteredPassword = passwordInputRef.current.value;
 
     // OPTIONAL: ADD VALIDATION
@@ -68,9 +71,15 @@ const AuthForm = () => {
 
     // SIGN UP MODE
     if (!isLogin) {
+      const enteredName = nameInputRef.current.value;
+
       // SEND POST REQUEST TO BE
       try {
-        const result = await createUser(enteredEmail, enteredPassword);
+        const result = await createUser(
+          enteredEmail,
+          enteredName,
+          enteredPassword
+        );
         // TODO SHOW SUCCESS SIGN UP FEEDBACK TO USERS
         console.log(result);
       } catch (error) {
@@ -88,6 +97,12 @@ const AuthForm = () => {
           <label htmlFor='email'>Your Email</label>
           <input ref={emailInputRef} type='email' id='email' required />
         </div>
+        {!isLogin && (
+          <div className={classes.control}>
+            <label htmlFor='name'>Your Name</label>
+            <input ref={nameInputRef} type='name' id='name' required />
+          </div>
+        )}
         <div className={classes.control}>
           <label htmlFor='password'>Your Password</label>
           <input
