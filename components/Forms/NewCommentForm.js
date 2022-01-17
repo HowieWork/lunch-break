@@ -21,13 +21,15 @@ const sendCommentData = async (commentData) => {
   }
 };
 
-const NewCommentForm = () => {
+const NewCommentForm = (props) => {
+  const { name, email } = props.user;
+
   // router.query.slug
   const router = useRouter();
   const postId = router.query.slug;
 
-  const [enteredEmail, setEnteredEmail] = useState('');
-  const [enteredName, setEnteredName] = useState('');
+  const [enteredEmail, setEnteredEmail] = useState(email || '');
+  const [enteredName, setEnteredName] = useState(name || '');
   const [enteredCommentDetail, setEnteredCommentDetail] = useState('');
 
   const [requestStatus, setRequestStatus] = useState();

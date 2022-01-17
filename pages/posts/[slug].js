@@ -1,5 +1,6 @@
-import { Fragment, useState, useCallback } from 'react';
+import { Fragment, useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useSession } from 'next-auth/client';
 
 import Head from 'next/head';
 import PostContent from '../../components/Posts/PostDetail/PostContent';
@@ -7,6 +8,9 @@ import Comments from '../../components/Comment/Comments';
 import { getPostsFiles, getPostData } from '../../lib/posts-util';
 
 const PostDetailPage = (props) => {
+  const [session, loading] = useSession();
+  const [user, setUser] = useState();
+
   const [comments, setComments] = useState();
 
   // router.query.slug
@@ -21,6 +25,12 @@ const PostDetailPage = (props) => {
     setComments(data.comments);
   }, []);
 
+  useEffect(() => {
+    if (!loading && session) {
+      setUser(session.user);
+    }
+  }, [loading, session]);
+
   return (
     <Fragment>
       <Head>
@@ -28,8 +38,12 @@ const PostDetailPage = (props) => {
         <meta name='description' content={props.post.excerpt} />
       </Head>
       <PostContent post={props.post} />
-      {/* FIXME REPLACE DUMMY COMMENTS WITH COMMENTS */}
-      <Comments comments={comments} showCommentsHandler={fetchComments} />
+      <Comments
+        comments={comments}
+        showCommentsHandler={fetchComments}
+        isLogin={session && !loading}
+        user={user}
+      />
     </Fragment>
   );
 };

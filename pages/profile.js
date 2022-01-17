@@ -1,7 +1,27 @@
+import { getSession } from 'next-auth/client';
+
 import UserProfile from '../components/Profile/UserProfile';
 
-const Profile = () => {
+const ProfilePage = () => {
   return <UserProfile />;
 };
 
-export default Profile;
+// ADDING SERVER-SIDE PAGE GUARDS
+export async function getServerSideProps(context) {
+  const session = await getSession({ req: context.req });
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/auth',
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: { session },
+  };
+}
+
+export default ProfilePage;

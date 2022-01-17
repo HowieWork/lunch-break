@@ -13,6 +13,7 @@ export default NextAuth({
         // 1. CONNECT TO DATABASE
         const client = await connectDatabase('users');
         const usersCollection = client.db().collection('users');
+
         // 2. CHECK IF USER EXISTS
         const user = await usersCollection.findOne({
           email: credentials.email,
@@ -22,6 +23,7 @@ export default NextAuth({
           client.close();
           throw new Error('No user found!');
         }
+
         // 3. VERIFY PASSWORD
         const isValid = await verifyPassword(
           credentials.password,
@@ -36,6 +38,7 @@ export default NextAuth({
         client.close();
 
         // NOTE RETURNED OBJECT WILL LET NEXT KNOW AUTHORIZATION IS SUCCESSFUL. AND RETURNED OBJECT LATER WILL BE ENCODED INTO JWT
+        // TODO ADD NAME?
         return { email: user.email };
       },
     }),
