@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useContext } from 'react';
 
-import Notification from '../UI/Notification';
+import NotificationContext from '../../store/notification-context';
 
 import classes from './ContactForm.module.css';
 
@@ -21,16 +21,20 @@ const sendContentData = async (contactDetail) => {
 };
 
 const ContactForm = () => {
+  const notificationCtx = useContext(NotificationContext);
+
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredName, setEnteredName] = useState('');
   const [enteredMessage, setEnteredMessage] = useState('');
-  const [requestStatus, setRequestStatus] = useState();
-  const [requestError, setRequestError] = useState();
 
   const sendMessageHandler = async (event) => {
     event.preventDefault();
 
-    setRequestStatus('pending');
+    notificationCtx.showNotification({
+      status: 'pending',
+      title: 'Sending message...',
+      message: 'Your message is on its way!',
+    });
 
     try {
       await sendContentData({
@@ -38,54 +42,24 @@ const ContactForm = () => {
         name: enteredName,
         message: enteredMessage,
       });
-      setRequestStatus('success');
+
+      notificationCtx.showNotification({
+        status: 'success',
+        title: 'Success!',
+        message: 'Message sent successfully!',
+      });
+
       setEnteredEmail('');
       setEnteredName('');
       setEnteredMessage('');
     } catch (error) {
-      setRequestError(error.message);
-      setRequestStatus('error');
+      notificationCtx.showNotification({
+        status: 'error',
+        title: 'Error!',
+        message: error.message || 'Something went wrong!',
+      });
     }
   };
-
-  // BETTER UX: PROVIDING USER FEEDBACK
-  let notification;
-
-  if (requestStatus === 'pending') {
-    notification = {
-      status: 'pending',
-      title: 'Sending message...',
-      message: 'Your message is on its way!',
-    };
-  }
-
-  if (requestStatus === 'success') {
-    notification = {
-      status: 'success',
-      title: 'Success!',
-      message: 'Message sent successfully!',
-    };
-  }
-
-  if (requestStatus === 'error') {
-    notification = {
-      status: 'error',
-      title: 'Error!',
-      message: requestError,
-    };
-  }
-
-  // CLEAR NOTIFICATION
-  useEffect(() => {
-    if (requestStatus === 'success' || requestStatus === 'error') {
-      const timer = setTimeout(() => {
-        setRequestStatus(null);
-        setRequestError(null);
-      }, 3000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [requestStatus]);
 
   return (
     <section className={classes.contact}>
@@ -127,13 +101,6 @@ const ContactForm = () => {
           </div>
         </div>
       </form>
-      {notification && (
-        <Notification
-          status={notification.status}
-          title={notification.title}
-          message={notification.message}
-        />
-      )}
     </section>
   );
 };

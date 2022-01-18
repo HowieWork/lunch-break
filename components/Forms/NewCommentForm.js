@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useContext } from 'react';
 import { useRouter } from 'next/router';
 
-import Notification from '../UI/Notification';
+import NotificationContext from '../../store/notification-context';
 
 import classes from './NewCommentForm.module.css';
 
@@ -22,6 +22,8 @@ const sendCommentData = async (commentData) => {
 };
 
 const NewCommentForm = (props) => {
+  const notificationCtx = useContext(NotificationContext);
+
   const { email, name } = props.user;
 
   // router.query.slug
@@ -32,14 +34,15 @@ const NewCommentForm = (props) => {
   const [enteredName, setEnteredName] = useState(name || '');
   const [enteredCommentDetail, setEnteredCommentDetail] = useState('');
 
-  const [requestStatus, setRequestStatus] = useState();
-  const [requestError, setRequestError] = useState();
-
   // SUBMIT FORM
   const sendCommentHandler = async (event) => {
     event.preventDefault();
 
-    setRequestStatus('pending');
+    notificationCtx.showNotification({
+      status: 'pending',
+      title: 'Sending comment...',
+      message: 'Your comment is on its way!',
+    });
 
     try {
       await sendCommentData({
@@ -49,54 +52,24 @@ const NewCommentForm = (props) => {
         commentDetail: enteredCommentDetail,
         date: new Date().toISOString(),
       });
-      setRequestStatus('success');
+
+      notificationCtx.showNotification({
+        status: 'success',
+        title: 'Success!',
+        message: 'Comment sent successfully!',
+      });
+
       setEnteredEmail('');
       setEnteredName('');
       setEnteredCommentDetail('');
     } catch (error) {
-      setRequestError(error.message);
-      setRequestStatus('error');
+      notificationCtx.showNotification({
+        status: 'error',
+        title: 'Error!',
+        message: error.message || 'Something went wrong!',
+      });
     }
   };
-
-  // BETTER UX: PROVIDING USER FEEDBACK
-  let notification;
-
-  if (requestStatus === 'pending') {
-    notification = {
-      status: 'pending',
-      title: 'Sending comment...',
-      message: 'Your comment is on its way!',
-    };
-  }
-
-  if (requestStatus === 'success') {
-    notification = {
-      status: 'success',
-      title: 'Success!',
-      message: 'Comment sent successfully!',
-    };
-  }
-
-  if (requestStatus === 'error') {
-    notification = {
-      status: 'error',
-      title: 'Error!',
-      message: requestError,
-    };
-  }
-
-  // CLEAR NOTIFICATION
-  useEffect(() => {
-    if (requestStatus === 'success' || requestStatus === 'error') {
-      const timer = setTimeout(() => {
-        setRequestStatus(null);
-        setRequestError(null);
-      }, 3000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [requestStatus]);
 
   return (
     <div>
@@ -143,13 +116,6 @@ const NewCommentForm = (props) => {
           </div>
         </div>
       </form>
-      {notification && (
-        <Notification
-          status={notification.status}
-          title={notification.title}
-          message={notification.message}
-        />
-      )}
     </div>
   );
 };

@@ -1,6 +1,8 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/client';
+
+import NotificationContext from '../../store/notification-context';
 
 import classes from './AuthForm.module.css';
 
@@ -27,6 +29,8 @@ const createUser = async (email, name, password) => {
 };
 
 const AuthForm = () => {
+  const notificationCtx = useContext(NotificationContext);
+
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const nameInputRef = useRef();
@@ -41,8 +45,13 @@ const AuthForm = () => {
   const submitHandler = async (event) => {
     event.preventDefault();
 
-    const enteredEmail = emailInputRef.current.value;
+    notificationCtx.showNotification({
+      status: 'pending',
+      title: isLogin ? 'Log in' : 'Sign up',
+      message: 'Your info is on its way!',
+    });
 
+    const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
     // OPTIONAL: ADD VALIDATION
@@ -58,13 +67,23 @@ const AuthForm = () => {
       });
       // ERROR: NULL LOG IN SUCCESSFULLY
       if (result.error) {
-        // TODO SHOW FAILED LOGIN FEEDBACK TO USERS
-        console.log(result.error);
+        // SHOW FAILED LOGIN FEEDBACK TO USERS
+        notificationCtx.showNotification({
+          status: 'error',
+          title: 'Error!',
+          message: result.error || 'Something went wrong!',
+        });
+
         router.replace('/auth');
       }
       if (!result.error) {
-        // TODO SHOW SUCCESS LOGIN FEEDBACK TO USERS
-        console.log(result.error);
+        // SHOW SUCCESS LOGIN FEEDBACK TO USERS
+        notificationCtx.showNotification({
+          status: 'success',
+          title: 'Success!',
+          message: 'You have logged in successfully!',
+        });
+
         router.replace('/profile');
       }
     }
@@ -80,11 +99,20 @@ const AuthForm = () => {
           enteredName,
           enteredPassword
         );
-        // TODO SHOW SUCCESS SIGN UP FEEDBACK TO USERS
-        console.log(result);
+
+        // SHOW SUCCESS SIGN UP FEEDBACK TO USERS
+        notificationCtx.showNotification({
+          status: 'success',
+          title: 'Success!',
+          message: 'You have signed up successfully!',
+        });
       } catch (error) {
-        // TODO SHOW ERROR FEEDBACK TO USERS
-        console.log(error);
+        // SHOW ERROR FEEDBACK TO USERS
+        notificationCtx.showNotification({
+          status: 'error',
+          title: 'Error!',
+          message: error.message || 'Something went wrong!',
+        });
       }
     }
   };

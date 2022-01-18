@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useContext } from 'react';
 
-import Notification from '../UI/Notification';
+import NotificationContext from '../../store/notification-context';
 
 import classes from './SubscriptionForm.module.css';
 
@@ -13,70 +13,47 @@ const sendSubscriptionData = async (subscriptionDetail) => {
     body: JSON.stringify(subscriptionDetail),
   });
 
-  const data = await response.json();
-
   if (!response.ok) {
     throw new Error(data.message || 'Something went wrong.');
   }
+
+  const data = await response.json();
+
+  return data;
 };
 
 const SubscriptionForm = () => {
+  const notificationCtx = useContext(NotificationContext);
+
   const [enteredEmail, setEnteredEmail] = useState('');
-  const [requestStatus, setRequestStatus] = useState();
-  const [requestError, setRequestError] = useState();
 
   const sendSubscriptionHandler = async (event) => {
     event.preventDefault();
 
-    setRequestStatus('pending');
+    notificationCtx.showNotification({
+      status: 'pending',
+      title: 'Registering for newsletter.',
+      message: 'Your info is on its way!',
+    });
 
     try {
       await sendSubscriptionData({ email: enteredEmail });
-      setRequestStatus('success');
+
+      notificationCtx.showNotification({
+        status: 'success',
+        title: 'Success!',
+        message: 'You have subscribed successfully!',
+      });
+
       setEnteredEmail('');
     } catch (error) {
-      setRequestError(error.message);
-      setRequestStatus('error');
+      notificationCtx.showNotification({
+        status: 'error',
+        title: 'Error!',
+        message: error.message || 'Something went wrong!',
+      });
     }
   };
-
-  let notification;
-
-  if (requestStatus === 'pending') {
-    notification = {
-      status: 'pending',
-      title: 'Sending information...',
-      message: 'Your info is on its way!',
-    };
-  }
-
-  if (requestStatus === 'success') {
-    notification = {
-      status: 'success',
-      title: 'Success!',
-      message: 'You have subscribed successfully!',
-    };
-  }
-
-  if (requestStatus === 'error') {
-    notification = {
-      status: 'error',
-      title: 'Error!',
-      message: requestError,
-    };
-  }
-
-  // CLEAR NOTIFICATION
-  useEffect(() => {
-    if (requestStatus === 'success' || requestStatus === 'error') {
-      const timer = setTimeout(() => {
-        setRequestStatus(null);
-        setRequestError(null);
-      }, 3000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [requestStatus]);
 
   return (
     <section className={classes['section-sub']}>
@@ -98,13 +75,6 @@ const SubscriptionForm = () => {
         />
         <button type='submit'>Subscribe</button>
       </form>
-      {notification && (
-        <Notification
-          status={notification.status}
-          title={notification.title}
-          message={notification.message}
-        />
-      )}
     </section>
   );
 };

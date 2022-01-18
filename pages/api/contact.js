@@ -1,4 +1,5 @@
-import { MongoClient } from 'mongodb';
+// import { MongoClient } from 'mongodb';
+import { connectDatabase, insertDocument } from '../../lib/db-util';
 
 const handler = async (req, res) => {
   if (req.method === 'POST') {
@@ -24,21 +25,16 @@ const handler = async (req, res) => {
     let client;
 
     try {
-      // CONNECT TO MONGODB
-      client = await MongoClient.connect(
-        `mongodb+srv://howie:***REMOVED***@cluster0.nornx.mongodb.net/my-site?retryWrites=true&w=majority`
-      );
+      // CONNECT TO MONGODB DATABASE
+      client = await connectDatabase('contacts');
     } catch (error) {
       res.status(500).json({ message: 'Could not connect to database' });
       return;
     }
 
-    // GET DATABASE
-    const db = client.db();
-
     // INSERT DOCUMENT TO COLLECTIONS
     try {
-      const result = await db.collection('messages').insertOne(newMessage);
+      const result = await insertDocument(client, 'messages', newMessage);
       // ADD THE SAME INSERTED ID TO NEWMESSAGE
       newMessage.id = result.insertedId;
     } catch (error) {
