@@ -15,7 +15,7 @@ const PostDetailPage = (props) => {
 
   // router.query.slug
   const router = useRouter();
-  const postId = router.query.slug;
+  const postId = router.query.postSlug;
 
   const fetchComments = useCallback(async () => {
     // FETCH COMMENTS BASED ON SLUG
@@ -50,9 +50,9 @@ const PostDetailPage = (props) => {
 
 export function getStaticProps(context) {
   const { params } = context;
-  const { slug } = params;
+  const { postSlug } = params;
 
-  const postData = getPostData(slug);
+  const postData = getPostData(postSlug);
 
   return {
     props: {
@@ -68,7 +68,7 @@ export function getStaticPaths() {
   const slugs = postFilenames.map((filename) => filename.replace(/\.md$/, ''));
 
   return {
-    paths: slugs.map((slug) => ({ params: { slug: slug } })),
+    paths: slugs.map((slug) => ({ params: { postSlug: slug } })),
     fallback: false,
   };
 }

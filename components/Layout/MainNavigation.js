@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/client';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 import Logo from './Logo';
 import Footer from './Footer';
+import SearchForm from '../Forms/SearchForm';
+import FilterForm from '../Forms/FilterForm';
 
 import {
   MdBrush,
@@ -21,8 +25,42 @@ import { Fragment } from 'react';
 const MainNavigation = () => {
   const [session, loading] = useSession();
 
+  const router = useRouter();
+
   const logoutHandler = () => {
     signOut();
+  };
+
+  const searchHandler = (keyword) => {
+    // VALIDATING KEYWORD
+    if (!keyword || keyword.trim() === '') {
+      return;
+    }
+
+    const path = `/posts/search/${keyword}`;
+
+    router.push(path);
+  };
+
+  const filterHandler = (year, month) => {
+    const numYear = +year;
+    const numMonth = +month;
+
+    // VALIDATING YEAR & MONTH
+    if (
+      isNaN(numYear) ||
+      isNaN(numMonth) ||
+      numYear > 2030 ||
+      numYear < 2020 ||
+      numMonth < 1 ||
+      numMonth > 12
+    ) {
+      return;
+    }
+
+    const path = `/posts/search/${numYear}/${numMonth}`;
+
+    router.push(path);
   };
 
   return (
@@ -40,14 +78,10 @@ const MainNavigation = () => {
         </div>
       </div>
 
-      {/* TODO B - SEARCH */}
+      {/* TODO B - SEARCH & FILTER */}
       <div className={classes['search-container']}>
-        <div className='center-flex-row tiny-gap'>
-          <span>
-            <MdOutlineSearch size='1.6rem' />
-          </span>
-          SEARCH BLOG
-        </div>
+        <SearchForm onSearch={searchHandler} />
+        <FilterForm onFilter={filterHandler} />
       </div>
 
       {/* C - NAVIGATION */}
@@ -60,6 +94,7 @@ const MainNavigation = () => {
               <Link href='/posts'>All posts</Link>
             </li>
           </div>
+
           {/* 2. FEATURED: DESIGN & PSYCHOLOGY */}
           <div className={classes['nav-subcontainer']}>
             <div className={classes['nav-title']}>Featured</div>
@@ -103,6 +138,7 @@ const MainNavigation = () => {
               <Link href='/contact'>Get help</Link>
             </li>
           </div>
+
           {/* 5. CTA */}
           <div className={classes['cta-container']}>
             {!session && !loading && (

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import AllPosts from '../../components/Posts/AllPosts';
+import Posts from '../../components/Posts/Posts';
 import { getAllPosts } from '../../lib/posts-util';
 
 const AllPostsPage = (props) => {
@@ -10,7 +10,7 @@ const AllPostsPage = (props) => {
         <title>All Posts</title>
         <meta name='description' content='A list of all posts' />
       </Head>
-      <AllPosts posts={props.posts} />
+      <Posts title='All posts' posts={props.posts} />
     </Fragment>
   );
 };

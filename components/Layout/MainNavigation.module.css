@@ -29,14 +29,8 @@
 
 /* SEARCH BAR */
 .search-container {
-  height: 5vh;
+  height: auto;
   padding: 0 3.2rem;
-}
-
-.search-container div {
-  height: 100%;
-  border: solid var(--font-color--secondary) 1px;
-  border-radius: 0.6rem;
 }
 
 /* NAVIGATION */
