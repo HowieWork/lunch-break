@@ -32,16 +32,39 @@
   --font-color--rgb: 37, 36, 34;
   --font-color--secondary: #403d39;
 
+  --font-size--tiny: 0.8rem;
+  --font-size--small: 1.2rem;
+  --font-size--normal: 1.6rem;
+  --font-size--medium: 2rem;
+  --font-size--large: 2.4rem;
+  --font-size--huge: 3.6rem;
+
+  --font-weight--extra-light: 100;
+  --font-weight--light: 300;
+  --font-weight--regular: 400;
+  --font-weight--medium: 500;
+  --font-weight--bold: 700;
+  --font-weight--extra-bold: 900;
+
+  --line-height--tiny: 1;
+  --line-height--small: 1.05;
+  --line-height--medium: 1.2;
+  --line-height--default: 1.6;
+  --line-height--large: 1.8;
+
+  /* SHADOW */
+  --shadow--primary: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
+
   /* SPACING */
   /* Spacing system (px)
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 112 / 128 */
-
-  --extra-tiny-gap: 0.4rem;
-  --tiny-gap: 0.8rem;
-  --extra-small-gap: 1.6rem;
-  --small-gap: 2.4rem;
-  --medium-gap: 4.8rem;
-  --large-gap: 9.6rem;
+  --gap--extra-tiny: 0.4rem;
+  --gap--tiny: 0.8rem;
+  --gap--extra-small: 1.6rem;
+  --gap--small: 2.4rem;
+  --gap--normal: 3.2rem;
+  --gap--medium: 4.8rem;
+  --gap--large: 9.6rem;
 }
 
 /* TODO ADD DARK THEME */
@@ -62,12 +85,6 @@ html {
   font-size: 62.5%;
 }
 
-@media (max-width: 48em) {
-  html {
-    font-size: 56.25%;
-  }
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--font-color);
@@ -80,7 +97,8 @@ body {
 
 input,
 textarea,
-button {
+button,
+select {
   font-family: inherit;
 }
 
@@ -89,8 +107,23 @@ a {
 }
 
 /* NOTE RESPONSIVENESS */
+/* 60em: 960px; 48em: 768px; 24em: 384px */
+@media (max-width: 60em) {
+  html {
+    font-size: 56.25%;
+  }
+}
 
 /* NOTE HELPER CLASSES */
+/* DISPLAY: NONE */
+.display-none {
+  display: none;
+}
+
+.opacity-zero {
+  opacity: 0;
+}
+
 /* CENTER */
 .center-text {
   text-align: center;

@@ -1,4 +1,6 @@
 .footer {
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--medium);
+
   text-align: center;
-  padding: 0 0 2.4rem 0;
 }

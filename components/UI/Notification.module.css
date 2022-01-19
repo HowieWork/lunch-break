@@ -4,7 +4,7 @@
   align-items: center;
 
   padding: 0 3.2rem;
-  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
+  box-shadow: var(--shadow--primary);
   background-color: var(--pending-color);
   color: var(--background-color);
 

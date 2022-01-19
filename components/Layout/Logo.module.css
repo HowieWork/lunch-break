@@ -1,16 +1,26 @@
-.logo-container {
+.logo {
+  width: fit-content;
+
   display: flex;
   align-items: center;
-  gap: var(--tiny-gap);
+  gap: var(--gap--tiny);
 
   color: var(--font-color);
 }
 
-.logo-text {
-  font-size: 1.8rem;
-  font-weight: 700;
+.image {
+  font-size: var(--font-size--medium);
 }
 
-.logo-image {
-  font-size: 1.8rem;
+.text {
+  font-size: var(--font-size--medium);
+  font-weight: var(--font-weight--bold);
+
+  display: flex;
+  gap: var(--gap--extra-tiny);
+}
+
+.text span {
+  font-size: var(--font-size--tiny);
+  font-weight: var(--font-weight--medium);
 }

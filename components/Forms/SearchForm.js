@@ -17,19 +17,21 @@ const SearchForm = (props) => {
   };
 
   return (
-    <form onSubmit={submitHanlder}>
-      <label htmlFor='keyword'></label>
-      <input
-        ref={keywordInputRef}
-        type='text'
-        id='keyword'
-        placeholder='Search blog'
-        required
-      />
-      <button>
-        <MdOutlineSearch size='1.6rem' />
-      </button>
-      {props.error && <div>{props.error}</div>}
+    <form onSubmit={submitHanlder} className={classes.form}>
+      <div className={classes.subcontainer}>
+        <label htmlFor='keyword'></label>
+        <input
+          ref={keywordInputRef}
+          type='text'
+          id='keyword'
+          placeholder='Search blog'
+          required
+        />
+        <button>
+          <MdOutlineSearch />
+        </button>
+      </div>
+      {props.error && <div className={classes.error}>{props.error}</div>}
     </form>
   );
 };

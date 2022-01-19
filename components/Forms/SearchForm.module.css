@@ -1,0 +1,72 @@
+.form {
+  font-size: var(--font-size--normal);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap--extra-tiny);
+}
+
+.subcontainer {
+  display: flex;
+  gap: var(--gap--tiny);
+}
+
+.form label {
+  display: none;
+}
+
+.form input,
+.form button {
+  font-size: var(--font-size--small);
+
+  border: solid 1px rgba(var(--font-color--rgb), 0.4);
+  border-radius: 0.4rem;
+  background-color: var(--background-color);
+  padding: var(--gap--extra-tiny) var(--gap--tiny);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.form input:hover,
+.form button:hover {
+  border-color: var(--font-color);
+}
+
+.form button:hover {
+  background-color: var(--font-color);
+  color: var(--background-color);
+}
+
+.form input {
+  width: 100%;
+}
+
+.form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(var(--font-color--rgb), 0.6);
+}
+
+.form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(var(--font-color--rgb), 0.6);
+}
+
+.form input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(var(--font-color--rgb), 0.6);
+}
+
+.form button {
+  width: auto;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form .error {
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--medium);
+  color: var(--error-color);
+}

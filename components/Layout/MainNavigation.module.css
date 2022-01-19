@@ -1,93 +1,221 @@
-.header-container {
+.container {
   width: 24vw;
+  min-width: 30rem;
+  max-width: 36rem;
   height: 100%;
 
-  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
+  padding: var(--gap--normal);
+
+  position: fixed;
+  top: 0;
+  left: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  position: fixed;
+  box-shadow: var(--shadow--primary);
+
+  /* background-color: orangered; */
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap--small);
 }
 
 /* LOGO */
 .logo-container {
-  height: 10vh;
-  width: 100%;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: var(--gap--extra-tiny);
 
-  padding: 0 3.2rem;
+  /* background-color: orangered; */
 }
 
 .logo-text {
-  font-size: 1.2rem;
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--medium);
 }
 
-/* SEARCH BAR */
+/* SEARCH & FILTER */
 .search-container {
-  height: auto;
-  padding: 0 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap--tiny);
+
+  /* background-color: orangered; */
 }
 
 /* NAVIGATION */
+.nav-container {
+  /* background-color: aqua; */
+}
+
 .nav-container ul {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--gap--extra-small);
 
   font-size: 1.6rem;
-}
-
-.nav-container li {
-  list-style: none;
-
-  transition: all 0.3s ease-in-out;
 }
 
 .nav-container li:hover {
   background-color: var(--font-color);
   color: var(--background-color);
+  border-radius: 0.4rem;
 }
 
 .nav-subcontainer {
   display: flex;
   flex-direction: column;
+  gap: var(--gap--tiny);
+
+  margin-bottom: var(--gap--extra-tiny);
+}
+
+.nav-title {
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--medium);
+  color: rgba(var(--font-color--rgb), 0.6);
+  text-transform: uppercase;
+
+  /* background-color: orangered; */
 }
 
 .nav-subcontainer li {
   display: flex;
-  gap: 2rem;
-  padding: 0.8rem 3.2rem;
+  gap: var(--gap--extra-small);
+
+  list-style: none;
+  padding: var(--gap--extra-tiny);
+
+  transition: all 0.3s ease-in-out;
+
+  /* background-color: orangered; */
 }
 
 .nav-subcontainer a {
+  width: 100%;
   color: inherit;
+
+  /* background-color: orangered; */
 }
 
 .nav-subcontainer svg {
-  font-size: 2rem;
-}
-
-.nav-title {
-  font-size: 1.2rem;
-  opacity: 60%;
-  padding: 1rem 3.2rem;
+  font-size: var(--font-size--medium);
 }
 
 /* CTA */
 .cta-container {
-  height: 10vh;
-  width: 100%;
-
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: var(--font-size--normal);
+  font-weight: var(--font-weight--medium);
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.4rem;
+  gap: var(--gap--tiny);
+
+  /* background-color: orangered; */
+}
+
+.cta-container li {
+  width: 100%;
+  padding: var(--gap--tiny) 0;
+
+  list-style: none;
+
+  text-align: center;
+
+  border: solid 1px rgba(var(--font-color--rgb), 0.4);
+  border-radius: 0.4rem;
+
+  transition: all 0.3s ease-in-out;
+
+  /* background-color: orange; */
+}
+
+.cta-container li:hover {
+  border-color: var(--font-color);
+  background-color: var(--font-color);
+  color: var(--background-color);
+}
+
+.cta-container li a,
+.cta-container li button {
+  color: inherit;
+}
+
+.cta-container li button {
+  font: inherit;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer-container {
+  /* background-color: orangered; */
+}
+
+/* HAMBURGER MENU */
+.menu-button {
+  width: var(--font-size--medium);
+  height: var(--font-size--medium);
+  background: transparent;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  cursor: pointer;
+
+  /* background-color: orangered; */
+}
+
+.menu-button span {
+  display: block;
+  width: var(--font-size--medium);
+  height: 2px;
+  background: var(--font-color);
+}
+
+/* TODO RESPONSIVENESS */
+@media (max-width: 80em) {
+}
+
+@media (max-width: 959px) {
+  .container .subcontainer {
+    display: none;
+  }
+
+  .container {
+    width: 100vw;
+    min-width: none;
+    max-width: none;
+    height: 4.8rem;
+
+    padding: 0 var(--gap--small);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: none;
+    background-color: var(--background-color);
+    z-index: 9;
+  }
+}
+
+@media (min-width: 960px) {
+  .menu-button {
+    display: none;
+  }
 }

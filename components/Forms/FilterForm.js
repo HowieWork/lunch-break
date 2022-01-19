@@ -14,23 +14,29 @@ const FilterForm = (props) => {
 
     props.onFilter(year, month);
 
-    yearInputRef.current.value = '2020';
-    monthInputRef.current.value = '1';
+    yearInputRef.current.value = '';
+    monthInputRef.current.value = '';
   };
 
   return (
-    <form onSubmit={submitHanlder}>
-      <div>
+    <form onSubmit={submitHanlder} className={classes.form}>
+      <div className={classes.control}>
         <label htmlFor='year'>Year</label>
-        <select id='year' ref={yearInputRef}>
+        <select id='year' ref={yearInputRef} defaultValue='' required>
+          <option value='' disabled hidden>
+            Year
+          </option>
           <option value='2020'>2020</option>
           <option value='2021'>2021</option>
           <option value='2022'>2022</option>
         </select>
       </div>
-      <div>
+      <div className={classes.control}>
         <label htmlFor='month'>Month</label>
-        <select id='month' ref={monthInputRef}>
+        <select id='month' ref={monthInputRef} defaultValue='' required>
+          <option value='' disabled hidden>
+            Month
+          </option>
           <option value='1'>January</option>
           <option value='2'>February</option>
           <option value='3'>March</option>
@@ -45,7 +51,10 @@ const FilterForm = (props) => {
           <option value='12'>December</option>
         </select>
       </div>
-      <button>Find posts</button>
+      <div className={classes.control}>
+        <label className='opacity-zero'>HIDE</label>
+        <button>Find</button>
+      </div>
     </form>
   );
 };

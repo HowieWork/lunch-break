@@ -5,7 +5,7 @@ import classes from './Logo.module.css';
 
 const Logo = () => {
   return (
-    <div className={classes['logo-container']}>
+    <div className={classes.logo}>
       {/* TODO REPLACE REACT ICON WITH SITE ICON IMAGE */}
       {/* <Image
         src='/'
@@ -14,9 +14,10 @@ const Logo = () => {
         height='24'
         layout='responsive'
       /> */}
-      <MdLunchDining className={classes['logo-image']} />
-      <h1 className={classes['logo-text']}>Lunch Break</h1>
-      <span>BETA</span>
+      <MdLunchDining className={classes.image} />
+      <h1 className={classes.text}>
+        Lunch Break <span>BETA</span>
+      </h1>
     </div>
   );
 };
