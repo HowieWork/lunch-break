@@ -14,6 +14,9 @@ const SearchForm = (props) => {
     props.onSearch(keyword);
 
     keywordInputRef.current.value = '';
+
+    // OPTIONAL: SHOULD CLOSE SIDE DRAWER OR NOT
+    props.closeSideDrawer && props.closeSideDrawer();
   };
 
   return (

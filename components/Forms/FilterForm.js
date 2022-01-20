@@ -16,6 +16,9 @@ const FilterForm = (props) => {
 
     yearInputRef.current.value = '';
     monthInputRef.current.value = '';
+
+    // OPTIONAL: SHOULD CLOSE SIDE DRAWER OR NOT
+    props.closeSideDrawer && props.closeSideDrawer();
   };
 
   return (
