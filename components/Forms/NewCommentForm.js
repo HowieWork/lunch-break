@@ -72,51 +72,49 @@ const NewCommentForm = (props) => {
   };
 
   return (
-    <div>
-      <form className={classes.form} onSubmit={sendCommentHandler}>
-        <div className={classes.controls}>
-          <div className={classes.control}>
-            <label htmlFor='email'>Your email</label>
-            <input
-              id='email'
-              type='email'
-              value={enteredEmail}
-              onChange={(event) => {
-                setEnteredEmail(event.target.value);
-              }}
-              required
-            />
-          </div>
-          <div className={classes.control}>
-            <label htmlFor='name'>Your name</label>
-            <input
-              id='name'
-              type='text'
-              value={enteredName}
-              onChange={(event) => {
-                setEnteredName(event.target.value);
-              }}
-              required
-            />
-          </div>
-          <div className={classes.control}>
-            <label htmlFor='commentDetail'>Comment</label>
-            <textarea
-              id='commentDetail'
-              row='5'
-              value={enteredCommentDetail}
-              onChange={(event) => {
-                setEnteredCommentDetail(event.target.value);
-              }}
-              required
-            />
-          </div>
-          <div className={classes.actions}>
-            <button type='submit'>Submit</button>
-          </div>
+    <form className={classes.form} onSubmit={sendCommentHandler}>
+      <div className={classes.controls}>
+        <div className={classes.control}>
+          <label htmlFor='email'>Your email:</label>
+          <input
+            id='email'
+            type='email'
+            value={enteredEmail}
+            onChange={(event) => {
+              setEnteredEmail(event.target.value);
+            }}
+            required
+          />
         </div>
-      </form>
-    </div>
+        <div className={classes.control}>
+          <label htmlFor='name'>Your name:</label>
+          <input
+            id='name'
+            type='text'
+            value={enteredName}
+            onChange={(event) => {
+              setEnteredName(event.target.value);
+            }}
+            required
+          />
+        </div>
+        <div className={classes.control}>
+          <label htmlFor='commentDetail'>Comment:</label>
+          <textarea
+            id='commentDetail'
+            row='5'
+            value={enteredCommentDetail}
+            onChange={(event) => {
+              setEnteredCommentDetail(event.target.value);
+            }}
+            required
+          />
+        </div>
+      </div>
+      <div className={classes.actions}>
+        <button type='submit'>Submit</button>
+      </div>
+    </form>
   );
 };
 

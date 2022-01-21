@@ -1,9 +1,14 @@
 .section-posts {
-  margin-bottom: 4.8rem;
+  margin-bottom: var(--gap--medium);
 }
 
 .section-posts h2 {
-  font-size: 2.4rem;
+  font-size: var(--font-size--large);
 
-  margin-bottom: 2.4rem;
+  margin-bottom: var(--gap--normal);
+}
+
+.not-found {
+  font-size: var(--font-size--normal);
+  text-align: center;
 }

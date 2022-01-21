@@ -1,14 +1,16 @@
 .section-hero {
-  margin-bottom: 4.8rem;
+  margin-bottom: var(--gap--medium);
 }
 
 .section-hero h2 {
-  font-size: 3.2rem;
+  font-size: var(--font-size--huge);
 
-  margin-bottom: 2.4rem;
+  margin-bottom: var(--gap--normal);
 }
 
 .section-hero p {
-  font-size: 1.6rem;
-  line-height: 1.6;
+  font-size: var(--font-size--normal);
+  line-height: var(--line-height--default);
+
+  margin-bottom: var(--gap--extra-small);
 }

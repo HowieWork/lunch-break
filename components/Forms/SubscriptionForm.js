@@ -56,7 +56,7 @@ const SubscriptionForm = () => {
   };
 
   return (
-    <section className={classes['section-sub']}>
+    <section className={classes['section-subscription']}>
       <h2>Join our newsletter!</h2>
       <p>
         Subscribe our newsletter to receive the latest popular news every week.

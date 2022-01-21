@@ -11,24 +11,25 @@
 
   overflow: hidden;
 
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--gap--tiny);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: var(--gap--extra-tiny);
 }
 
 .content h3 {
-  font-size: 2rem;
+  font-size: var(--font-size--medium);
+  font-weight: var(--font-weight--bold);
 }
 
 .content time {
-  font-size: 1.2rem;
+  font-size: var(--font-size--small);
 }
 
 .content p {
-  font-size: 1.4rem;
+  font-size: var(--font-size--normal);
   color: var(--font-color--secondary);
 }

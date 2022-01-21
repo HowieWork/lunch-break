@@ -68,15 +68,18 @@ const ProfileForm = (props) => {
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <div className={classes.control}>
-        <label htmlFor='new-password'>New password</label>
-        <input ref={newPasswordRef} id='new-password' type='password' />
+      <div className={classes.controls}>
+        <div className={classes.control}>
+          <label htmlFor='new-password'>New password</label>
+          <input ref={newPasswordRef} id='new-password' type='password' />
+        </div>
+        <div className={classes.control}>
+          <label htmlFor='old-password'>Old password</label>
+          <input ref={oldPasswordRef} id='old-password' type='password' />
+        </div>
       </div>
-      <div className={classes.control}>
-        <label htmlFor='old-password'>Old password</label>
-        <input ref={oldPasswordRef} id='old-password' type='password' />
-      </div>
-      <div className={classes.action}>
+
+      <div className={classes.actions}>
         <button type='submit'>Change password</button>
       </div>
     </form>

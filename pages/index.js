@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import Hero from '../components/HomePage/Hero';
 import SubscriptionForm from '../components/Forms/SubscriptionForm';
-import FeaturedPosts from '../components/HomePage/FeaturedPosts';
+import Posts from '../components/Posts/Posts';
 
 import { getAllFeaturedPosts } from '../lib/posts-util';
 
@@ -22,7 +22,7 @@ const HomePage = (props) => {
       {/* NEWSLETTER SUBSCRIPTION */}
       <SubscriptionForm />
       {/* FEATURED POSTS */}
-      <FeaturedPosts posts={props.posts} />
+      <Posts title='Featured' posts={props.posts} />
     </Fragment>
   );
 };

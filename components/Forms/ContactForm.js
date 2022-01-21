@@ -62,8 +62,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section className={classes.contact}>
-      <h1>How can I help you?</h1>
+    <section className={classes.container}>
+      <h2>How can I help you?</h2>
       <form className={classes.form} onSubmit={sendMessageHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>
@@ -96,9 +96,9 @@ const ContactForm = () => {
               onChange={(event) => setEnteredMessage(event.target.value)}
             ></textarea>
           </div>
-          <div className={classes.actions}>
-            <button type='submit'>Send message</button>
-          </div>
+        </div>
+        <div className={classes.actions}>
+          <button type='submit'>Send message</button>
         </div>
       </form>
     </section>

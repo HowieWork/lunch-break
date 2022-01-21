@@ -1,38 +1,31 @@
 .layout {
-  height: 100vh;
-  display: flex;
   position: relative;
 }
 
 /* MAIN NAVIGATION WIDTH: 24VW */
 .main-container {
-  width: auto;
+  width: 76vw;
 
   padding: 3.2rem 6.4rem;
 
   position: absolute;
-  left: 24vw;
+  right: 0;
 
-  /* FIXME DELET LINES BELOW */
-  /* border-top: 2px solid red; */
-  /* background-color: antiquewhite; */
-  /* z-index: 99; */
-  /* display: none; */
+  z-index: -1;
 }
 
 /* TODO RESPONSIVENESS */
 @media (max-width: 80em) {
   .main-container {
-    left: 28vw;
+    width: 72vw;
   }
 }
 
 @media (max-width: 60em) {
   .main-container {
     width: 100vw;
-    left: 0;
 
     padding: var(--gap--small);
-    margin-top: 7.2rem;
+    margin-top: 6.4rem;
   }
 }

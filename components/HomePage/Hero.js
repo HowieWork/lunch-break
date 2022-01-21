@@ -12,13 +12,11 @@ const Hero = () => {
           pariatur.Ut enim ad minim veniam, quis nostrud exercitation ullamco
           laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        <br />
         <p>
           * This is a product mockup. It is used to demonstrate my design and
           development (e.g. Next.js) skills for now. Some features are currently
           unavailable or still under construction.
         </p>
-        <br />
         <p>
           * Lunch Break idea is my own and this site will be updated in the
           future.

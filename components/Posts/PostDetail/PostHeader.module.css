@@ -1,17 +1,20 @@
+.container {
+  margin-bottom: var(--gap--normal);
+}
+
 .image {
   border-radius: 0.6rem;
-
   overflow: hidden;
 
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--gap--extra-small);
 }
 
 .title {
-  font-size: 3.2rem;
-  margin-bottom: 0.8rem;
+  font-size: var(--font-size--large);
+  font-weight: var(--font-weight--bold);
+  margin-bottom: var(--gap--extra-tiny);
 }
 
-.date-duration {
-  font-size: 1.2rem;
-  margin-bottom: 2.4rem;
+.info {
+  font-size: var(--font-size--small);
 }

@@ -16,8 +16,6 @@
 
   box-shadow: var(--shadow--primary);
 
-  z-index: 9;
-
   background-color: var(--background-color);
 }
 
@@ -50,10 +48,6 @@
 }
 
 /* NAVIGATION */
-.nav-container {
-  /* background-color: aqua; */
-}
-
 .nav-container ul {
   display: flex;
   flex-direction: column;
@@ -158,9 +152,6 @@
 }
 
 /* FOOTER */
-.footer-container {
-  /* background-color: orangered; */
-}
 
 /* RESPONSIVENESS */
 @media (max-width: 60em) {

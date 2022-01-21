@@ -14,6 +14,7 @@ const Layout = (props) => {
   return (
     <div className={classes.layout}>
       <MainNavigation />
+
       <main className={classes['main-container']}>{props.children}</main>
       {activeNotification && (
         <Notification

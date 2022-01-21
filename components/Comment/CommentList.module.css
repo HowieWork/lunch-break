@@ -1,0 +1,5 @@
+.container {
+  padding: var(--gap--normal) 0;
+
+  border-top: 1px solid rgba(var(--font-color--rgb), 0.4);
+}

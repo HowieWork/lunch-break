@@ -15,9 +15,9 @@ const PostHeader = (props) => {
   });
 
   return (
-    <header>
+    <header className={classes.container}>
       {/* COVER IMAGE */}
-      <div className={classes['image']}>
+      <div className={classes.image}>
         <Image
           src={image}
           alt={title}
@@ -30,7 +30,7 @@ const PostHeader = (props) => {
       {/* POST TITLE */}
       <h1 className={classes.title}>{title}</h1>
       {/* DATE AND DURATION */}
-      <div className={classes['date-duration']}>
+      <div className={classes.info}>
         {formattedDate} | {duration}
       </div>
     </header>

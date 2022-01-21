@@ -1,5 +1,19 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.2rem;
+  gap: var(--gap--normal);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 60em) {
+  .grid {
+    gap: var(--gap--small);
+  }
+}
+
+@media (max-width: 32em) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--gap--normal);
+  }
 }

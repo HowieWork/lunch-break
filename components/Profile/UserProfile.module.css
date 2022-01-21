@@ -1,0 +1,16 @@
+.container {
+  width: 78%;
+  margin: 0 auto;
+}
+
+.container h2 {
+  font-size: var(--font-size--medium);
+  margin-bottom: var(--gap--extra-small);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 32em) {
+  .container {
+    width: 100%;
+  }
+}

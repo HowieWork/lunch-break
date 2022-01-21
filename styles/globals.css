@@ -30,7 +30,7 @@
   /* TYPOGRAPHY */
   --font-color: #252422;
   --font-color--rgb: 37, 36, 34;
-  --font-color--secondary: #403d39;
+  --font-color--secondary: #929291;
 
   --font-size--tiny: 0.8rem;
   --font-size--small: 1.2rem;
@@ -53,7 +53,7 @@
   --line-height--large: 1.8;
 
   /* SHADOW */
-  --shadow--primary: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
+  --shadow--primary: 0 7px 30px -10px rgba(150, 170, 180, 0.6);
 
   /* SPACING */
   /* Spacing system (px)
@@ -107,7 +107,7 @@ a {
 }
 
 /* NOTE RESPONSIVENESS */
-/* 60em: 960px; 48em: 768px; 24em: 384px */
+/* 60em: 960px; 48em: 768px; 32em: 512px; 24em: 384px */
 @media (max-width: 60em) {
   html {
     font-size: 56.25%;

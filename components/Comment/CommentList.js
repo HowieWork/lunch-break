@@ -6,7 +6,7 @@ const CommentList = (props) => {
   const { comments } = props;
 
   return (
-    <ul>
+    <ul className={classes.container}>
       {comments.map((comment) => {
         return <CommentItem key={comment._id} comment={comment} />;
       })}

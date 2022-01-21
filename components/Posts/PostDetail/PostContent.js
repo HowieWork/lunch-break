@@ -64,7 +64,7 @@ const PostContent = (props) => {
   };
 
   return (
-    <div className={classes['container']}>
+    <section className={classes['container']}>
       {/* TODO ADD READING STATUS FEATURE */}
       {/* <aside className={classes['side-bar-container']}>STATUS | SOCIAL SHARE</aside> */}
 
@@ -77,7 +77,7 @@ const PostContent = (props) => {
         />
         <ReactMarkdown components={customComponents}>{content}</ReactMarkdown>
       </article>
-    </div>
+    </section>
   );
 };
 

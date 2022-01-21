@@ -1,0 +1,25 @@
+.container {
+  list-style: none;
+
+  font-size: var(--font-size--normal);
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: var(--gap--small);
+}
+
+.title {
+  display: flex;
+  gap: var(--gap--extra-tiny);
+
+  margin-bottom: var(--gap--extra-tiny);
+}
+
+.name {
+  font-weight: var(--font-weight--medium);
+}
+
+.date {
+  color: var(--font-color--secondary);
+}

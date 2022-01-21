@@ -7,7 +7,7 @@ import NavLinks from './NavLinks';
 import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawerHandler = () => {
     console.log('CLICKED!!!');
@@ -15,32 +15,30 @@ const MainNavigation = () => {
   };
 
   return (
-    <header>
+    <header className={classes.container}>
       {/* 1. NON-SIDE-DRAWER NAVIGATION */}
       <div className={classes['non-slide-nav']}>
         <NavLinks />
       </div>
 
       {/* 2. SIDE-DRAWER NAVIGATION */}
-      {/* HAMBURGER MENU: TOGGLE SIDE DRAWER */}
+      {/* 1) MENU BTN *TOGGLE SIDE DRAWER */}
       <div className={classes['hamburger-menu-container']}>
-        <div>
-          {!isDrawerOpen && (
-            <MdMenu
-              className={classes['menu-btn']}
-              onClick={toggleDrawerHandler}
-            />
-          )}
-          {isDrawerOpen && (
-            <MdClose
-              className={classes['menu-btn']}
-              onClick={toggleDrawerHandler}
-            />
-          )}
-        </div>
+        {!isDrawerOpen && (
+          <MdMenu
+            className={classes['menu-btn']}
+            onClick={toggleDrawerHandler}
+          />
+        )}
+        {isDrawerOpen && (
+          <MdClose
+            className={classes['menu-btn']}
+            onClick={toggleDrawerHandler}
+          />
+        )}
       </div>
 
-      {/* MENU-BTN-BG */}
+      {/* 2) MENU-BTN-BG */}
       {!isDrawerOpen && <div className={classes['menu-btn-bg']}></div>}
 
       {/* BACKDROP */}
@@ -51,7 +49,7 @@ const MainNavigation = () => {
         ></div>
       )}
 
-      {/* SIDE-DRAWER */}
+      {/* 3) SIDE-DRAWER */}
       <CSSTransition
         in={isDrawerOpen}
         timeout={300}

@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
 import { getCategoryFeaturedPosts } from '../../lib/posts-util';
-import FeaturedPosts from '../../components/HomePage/FeaturedPosts';
+import Posts from '../../components/Posts/Posts';
 
 const DesignFeaturedPosts = (props) => {
   return (
@@ -10,7 +10,7 @@ const DesignFeaturedPosts = (props) => {
         <title>Design Featured Posts</title>
         <meta name='description' content='A list of design featured posts' />
       </Head>
-      <FeaturedPosts posts={props.posts} />
+      <Posts title='Featured' posts={props.posts} />
     </Fragment>
   );
 };

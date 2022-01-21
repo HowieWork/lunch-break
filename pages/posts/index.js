@@ -10,7 +10,7 @@ const AllPostsPage = (props) => {
         <title>All Posts</title>
         <meta name='description' content='A list of all posts' />
       </Head>
-      <Posts title='All posts' posts={props.posts} />
+      <Posts title='All Posts' posts={props.posts} />
     </Fragment>
   );
 };
