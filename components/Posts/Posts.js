@@ -4,7 +4,7 @@ import classes from './Posts.module.css';
 
 const Posts = (props) => {
   const { title, posts } = props;
-  console.log(title);
+
   return (
     <section className={classes['section-posts']}>
       <h2>{title}</h2>
