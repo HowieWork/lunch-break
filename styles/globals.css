@@ -70,6 +70,8 @@
 /* TODO ADD DARK THEME */
 .dark-theme {
   --background-color: #031423;
+  --background-color--rgb: 3, 20, 35;
+
   --font-color: #d6def8;
   --font-color--rgb: 214, 222, 248;
   --font-color--secondary: #969bae;
@@ -90,7 +92,7 @@ body {
   color: var(--font-color);
 
   display: block;
-  background: var(--background-color);
+  background-color: var(--background-color);
 
   overflow-x: hidden;
 }

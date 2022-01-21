@@ -4,6 +4,7 @@
 
 .section-hero h2 {
   font-size: var(--font-size--huge);
+  color: var(--font-color);
 
   margin-bottom: var(--gap--normal);
 }

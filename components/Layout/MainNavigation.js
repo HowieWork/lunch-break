@@ -10,7 +10,6 @@ const MainNavigation = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawerHandler = () => {
-    console.log('CLICKED!!!');
     setIsDrawerOpen((prevState) => !prevState);
   };
 

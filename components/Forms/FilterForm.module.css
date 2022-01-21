@@ -24,6 +24,7 @@
 .control select,
 .control button {
   font-size: var(--font-size--small);
+  color: var(--font-color);
 
   cursor: pointer;
 

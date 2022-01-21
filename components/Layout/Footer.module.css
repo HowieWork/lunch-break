@@ -1,5 +1,26 @@
 .footer {
   font-size: var(--font-size--small);
+  color: var(--font-color);
 
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: var(--gap--extra-small);
+}
+
+.footer div {
+  font-size: var(--font-size--medium);
+  color: rgba(var(--font-color--rgb), 0.6);
+
+  display: flex;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.footer div:hover {
+  color: var(--font-color);
 }

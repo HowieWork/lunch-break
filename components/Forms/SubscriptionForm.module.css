@@ -8,8 +8,9 @@
   gap: var(--gap--tiny);
 
   box-shadow: var(--shadow--primary);
-  border-radius: 0.4rem;
   background-color: var(--background-color);
+  border-radius: 0.4rem;
+  border: 1px solid rgba(var(--font-color--rgb), 0.2);
 
   margin-bottom: var(--gap--medium);
 }
@@ -57,10 +58,27 @@
   width: 100%;
 }
 
+/* PLACEHOLDER STYLING */
+.form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(var(--font-color--rgb), 0.6);
+}
+
+.form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(var(--font-color--rgb), 0.6);
+}
+
+.form input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(var(--font-color--rgb), 0.6);
+}
+
 .form button {
   cursor: pointer;
 
   font-weight: var(--font-weight--medium);
+  color: var(--font-color);
 
   padding: var(--gap--tiny) var(--gap--small);
 }

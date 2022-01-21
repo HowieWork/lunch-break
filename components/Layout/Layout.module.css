@@ -1,10 +1,14 @@
 .layout {
+  height: 100%;
   position: relative;
 }
 
 /* MAIN NAVIGATION WIDTH: 24VW */
 .main-container {
   width: 76vw;
+  background-color: var(--background-color);
+
+  color: var(--font-color);
 
   padding: 3.2rem 6.4rem;
 
