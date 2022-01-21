@@ -34,7 +34,7 @@
 
 .logo-text {
   font-size: var(--font-size--small);
-  color: var(--font-color--secondary);
+  color: var(--font-color);
 }
 
 /* SEARCH & FILTER */
