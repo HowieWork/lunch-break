@@ -69,12 +69,14 @@
 
 /* TODO ADD DARK THEME */
 .dark-theme {
-  --background-color: #031423;
-  --background-color--rgb: 3, 20, 35;
+  --background-color: #161616;
+  --background-color--rgb: 22, 22, 22;
 
-  --font-color: #d6def8;
-  --font-color--rgb: 214, 222, 248;
-  --font-color--secondary: #969bae;
+  --font-color: #fff;
+  --font-color--rgb: 255, 255, 255;
+  --font-color--secondary: #bbb;
+
+  --shadow--primary: 0 7px 30px -10px rgba(0, 0, 0, 0.8);
 }
 
 * {
