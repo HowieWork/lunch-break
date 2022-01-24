@@ -112,24 +112,34 @@ const NavLinks = (props) => {
             </div>
 
             {/* 3. DESIGN: HOME, OFFICE */}
+            {/* NOTE CURRENTLY DISABLED LINKS */}
             <div className={classes['nav-subcontainer']}>
               <div className={classes['nav-title']}>Design</div>
               <li onClick={props.onClick}>
                 <MdHouse />
-                <Link href='/posts/design/home'>Home</Link>
+                <Link href='/posts/design/home'>
+                  <a className={classes['disabled-link']}>Home</a>
+                </Link>
               </li>
               <li onClick={props.onClick}>
                 <MdWork />
-                <Link href='/posts/design/office'>Office | Workplace</Link>
+                <Link href='/posts/design/office'>
+                  <a className={classes['disabled-link']}>Office | Workplace</a>
+                </Link>
               </li>
             </div>
 
             {/* 4. PSYCHOLOGY: DESIGN */}
+            {/* NOTE CURRENTLY DISABLED LINKS */}
             <div className={classes['nav-subcontainer']}>
               <div className={classes['nav-title']}>Psychology</div>
               <li onClick={props.onClick}>
                 <MdDevicesOther />
-                <Link href='/'>Design & Develop Series</Link>
+                <Link href='/'>
+                  <a className={classes['disabled-link']}>
+                    Design & Develop Series
+                  </a>
+                </Link>
               </li>
             </div>
 

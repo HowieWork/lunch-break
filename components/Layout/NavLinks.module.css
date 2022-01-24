@@ -45,7 +45,6 @@
 }
 
 /* NAVIGATION */
-
 .nav-container ul {
   display: flex;
   flex-direction: column;
@@ -100,6 +99,11 @@
 
 .nav-subcontainer a {
   width: 100%;
+}
+
+.disabled-link {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* CTA */
