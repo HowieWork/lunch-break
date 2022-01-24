@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;700;900&display=swap');
 
 /* CSS VARIABLES */
 :root {
@@ -40,8 +40,8 @@
   --font-size--huge: 3.6rem;
 
   --font-weight--extra-light: 100;
-  --font-weight--light: 300;
-  --font-weight--regular: 400;
+  --font-weight--light: 200;
+  --font-weight--regular: 300;
   --font-weight--medium: 500;
   --font-weight--bold: 700;
   --font-weight--extra-bold: 900;
@@ -91,6 +91,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: var(--font-weight--regular);
   color: var(--font-color);
 
   display: block;

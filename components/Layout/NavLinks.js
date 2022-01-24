@@ -117,13 +117,15 @@ const NavLinks = (props) => {
               <div className={classes['nav-title']}>Design</div>
               <li onClick={props.onClick}>
                 <MdHouse />
-                <Link href='/posts/design/home'>
+                {/* /posts/design/home */}
+                <Link href='/'>
                   <a className={classes['disabled-link']}>Home</a>
                 </Link>
               </li>
               <li onClick={props.onClick}>
                 <MdWork />
-                <Link href='/posts/design/office'>
+                {/* /posts/design/office */}
+                <Link href='/'>
                   <a className={classes['disabled-link']}>Office | Workplace</a>
                 </Link>
               </li>
