@@ -1,6 +1,6 @@
 ---
 title: 'Time cannot be managed, why are the elites still mentioning Time Management Part II'
-date: '2019-01-10'
+date: '2021-12-12'
 duration: '8 min'
 category: ['psychology']
 image: 'time-cannot-be-managed-why-are-the-elites-still-mentioning-time-management-part-2.jpg'
@@ -20,10 +20,10 @@ Procrastination stems from a very powerful physical law: inertia
 Procrastination hurts only myself, because no one really cares how my life goes, except myself.
 Strategy
 
-1. Put a piece of paper or index card in your pocket;
-2. Break down large projects into manageable pieces;
-3. Teach your mind (consciousness) to recognize the first signs of laziness or procrastination;
-4. Insist on taking notes in a certain way
+1.  Put a piece of paper or index card in your pocket;
+2.  Break down large projects into manageable pieces;
+3.  Teach your mind (consciousness) to recognize the first signs of laziness or procrastination;
+4.  Insist on taking notes in a certain way
 
 ## The Enemy of Procrastination: The Perseverance [Image]
 

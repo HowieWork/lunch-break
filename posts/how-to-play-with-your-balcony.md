@@ -1,6 +1,6 @@
 ---
 title: 'How to play with your balcony'
-date: '2018-11-29'
+date: '2020-06-17'
 duration: '6 min'
 category: ['design', 'home']
 image: 'how-to-play-with-your-balcony.jpg'

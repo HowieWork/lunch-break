@@ -1,6 +1,6 @@
 ---
 title: 'Rich Habits: Five Habits of Successful People'
-date: '2019-01-08'
+date: '2020-07-07'
 duration: '3 min'
 category: ['psychology']
 image: 'rich-habits-five-habits-of-successful-people.jpg'

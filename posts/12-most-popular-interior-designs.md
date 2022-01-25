@@ -1,6 +1,6 @@
 ---
 title: '12 most popular interior designs'
-date: '2018-11-04'
+date: '2020-02-24'
 duration: '8 min'
 category: ['design', 'home']
 image: '12-most-popular-interior-designs.jpg'

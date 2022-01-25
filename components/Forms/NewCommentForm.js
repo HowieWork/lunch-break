@@ -28,7 +28,7 @@ const NewCommentForm = (props) => {
 
   // router.query.slug
   const router = useRouter();
-  const postId = router.query.slug;
+  const postId = router.query.postSlug;
 
   const [enteredEmail, setEnteredEmail] = useState(email || '');
   const [enteredName, setEnteredName] = useState(name || '');

@@ -1,6 +1,6 @@
 ---
 title: 'Secret garden'
-date: '2019-01-06'
+date: '2020-08-12'
 duration: '7 min'
 category: ['design', 'home']
 image: 'secret-garden.jpg'

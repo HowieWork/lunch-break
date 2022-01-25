@@ -1,6 +1,6 @@
 ---
 title: 'How to create a small office environment'
-date: '2021-01-12'
+date: '2020-05-29'
 duration: '7 min'
 category: ['design', 'office']
 image: 'how-to-create-a-small-office-environment.jpg'

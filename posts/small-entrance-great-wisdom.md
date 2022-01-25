@@ -1,6 +1,6 @@
 ---
 title: 'Small Entrance, Great Wisdom'
-date: '2021-01-12'
+date: '2020-10-20'
 duration: '4 min'
 category: ['design', 'home']
 image: 'small-entrance-great-wisdom.jpg'

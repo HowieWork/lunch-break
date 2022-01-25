@@ -1,6 +1,6 @@
 ---
 title: 'Time Management: How to Improve Reading Speed While Guaranteed to Comprehend'
-date: '2018-10-11'
+date: '2021-10-11'
 duration: '6 min'
 category: ['psychology']
 image: 'time-management-how-to-improve-reading-speed-while-guaranteed-to-comprehend.jpg'

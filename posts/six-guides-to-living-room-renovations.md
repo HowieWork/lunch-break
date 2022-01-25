@@ -1,6 +1,6 @@
 ---
 title: 'Six guides to living room renovations'
-date: '2021-01-12'
+date: '2021-09-14'
 duration: '9 min'
 category: ['design', 'home']
 image: 'six-guides-to-living-room-renovations.jpg'

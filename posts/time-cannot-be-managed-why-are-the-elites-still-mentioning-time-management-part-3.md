@@ -1,6 +1,6 @@
 ---
 title: 'Time cannot be managed, why are the elites still mentioning Time Management Part III'
-date: '2019-01-11'
+date: '2021-01-11'
 duration: '4 min'
 category: ['psychology']
 image: 'time-cannot-be-managed-why-are-the-elites-still-mentioning-time-management-part-3.jpg'

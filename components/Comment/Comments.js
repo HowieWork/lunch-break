@@ -8,7 +8,7 @@ import classes from './Comments.module.css';
 
 const Comments = (props) => {
   const { comments, showCommentsHandler, isLogin, user } = props;
-  console.log(user);
+
   const [isShowComments, setIsShowComments] = useState(false);
   const [writeComment, setWriteComment] = useState(false);
 

@@ -1,6 +1,6 @@
 ---
 title: 'A trend that affects a trend, a change that brings about a change'
-date: '2019-01-10'
+date: '2021-03-21'
 duration: '5 min'
 category: ['psychology']
 image: 'a-trend-that-affects-a-trend-a-change-that-brings-about-a-change.jpg'

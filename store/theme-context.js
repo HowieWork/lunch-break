@@ -21,7 +21,7 @@ export const ThemeContextProvider = (props) => {
   useEffect(() => {
     // SYNC WITH SYSTEM COLOR THEME
     const isSystemDark = window.matchMedia('(prefers-color-scheme: dark');
-    console.log(isSystemDark.matches);
+
     isSystemDark.addEventListener('change', function (event) {
       // NOTE .MATCHES RETURNS TRUE/FALSE
       event.matches ? setIsDarkTheme(true) : setIsDarkTheme(false);

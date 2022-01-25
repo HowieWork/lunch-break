@@ -32,4 +32,14 @@
 .content p {
   font-size: var(--font-size--normal);
   color: var(--font-color--secondary);
+  line-height: var(--line-height--medium);
+  letter-spacing: 0.5px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* number of lines to show */
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 }

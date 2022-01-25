@@ -1,6 +1,6 @@
 ---
 title: '9 things I will do as soon as possible in 2019'
-date: '2019-01-01'
+date: '2020-01-14'
 duration: '7 min'
 category: ['psychology']
 image: '9-things-i-will-do-as-soon-as-possible-in-2019.jpg'

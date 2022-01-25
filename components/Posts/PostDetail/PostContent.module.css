@@ -30,7 +30,8 @@
   margin-bottom: var(--gap--extra-small);
 }
 
-.post-container ul {
+.post-container ul,
+.post-container ol {
   margin-top: var(--gap--extra-small);
   margin-left: var(--gap--small);
 }
