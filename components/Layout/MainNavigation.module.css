@@ -5,6 +5,7 @@
   height: 100vh;
 
   position: fixed;
+  /* background-color: aqua; */
 }
 
 /* NOTE SLIDE */
@@ -45,7 +46,7 @@
     width: 100vw;
     min-width: none;
     max-width: none;
-    height: 100vh;
+    height: auto;
   }
 
   /* NOTE NON SLIDE */
