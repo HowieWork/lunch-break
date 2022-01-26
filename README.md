@@ -18,22 +18,22 @@
 
   <!-- PROJECT LOGO / TITLE -->
   <a href="https://github.com/howiework/lunch-break">
-    <img src="/public/images/site/site-logo.png" alt="site logo" width="160">
+    <img src="/public/images/site/site-logo.png" alt="site logo" width="360">
   </a>
 
-  <h3>TITLE / SUBTITLE</h3>
+  <h3>A blog site focusing on work-life balance</h3>
 
   <p>
-   APPLICATION DESCRIPTION
+   Built with Next.js
   </p>
 
   <br />
 
   <!-- PROJECT LINKS -->
   <div align="center">
-    <a href="#" target="_blank"><strong>Demo</strong></a>
+    <a href="https://lunch-break.vercel.app/" target="_blank"><strong>Demo</strong></a>
     ·
-    <a href="#" target="_blank"><strong>GitHub</strong></a>
+    <a href="https://github.com/howiework/lunch-break" target="_blank"><strong>GitHub</strong></a>
     ·
     <a href="#contact"><strong>Contact</strong></a>
   </div>
@@ -68,23 +68,29 @@
 
 <br />
 
-<div align="center">
-  <img src="#" width="720" alt="APP SCREENSHOT">
+<div align="center" float="left">
+  <img src="/public/images/site/app-lunch-break-cover-light.webp" width="360" alt="APP SCREENSHOT LIGHT">
+  <img src="/public/images/site/app-lunch-break-cover-dark.webp" width="360" alt="APP SCREENSHOT DARK">
 </div>
-
 <br />
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+#### What is the goal
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Help people to grow a positive mindset and live a better life by sharing design and psychology knowledge.
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### What we believe
+
+**Share** share the latest findings, new design trends and interesting storied in tech.
+
+**Impact** we believe in impact, even if it's just changing your perspective of looking at a problem.
+
+**Diversity** there has never been an era like today, and we have to process tremendous information and countless tasks. Diverse ways of thinking is crucial to reduce pressure in daily life.
 
 <br />
 
 ### Built with
 
-[![React][react-shield]][react-url] [![Node][node-shield]][node-url] [![Express][express-shield]][express-url] [![Axios][axios-shield]][axios-url] [![Mongoose][mongoose-shield]][mongoose-url]
+[![Next][next-shield]][next-url] [![React][react-shield]][react-url] [![Mongodb][mongodb-shield]][mongodb-url]
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
@@ -92,22 +98,38 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 
 ## Features
 
-### Feature 1
+### Popular posts
 
-FEATURE 1 DESCRIPTION
+Read the trending and popular contents in tech field.
 
 <div align="center">
-  <img src="/" width="720" align="center">
+  <img src="/public/images/site/feature-popular-posts.png" width="720" align="center">
 </div>
 
 <br />
 
-### Feature 2
+### Search
 
-FEATURE 2 DESCRIPTION
+Find your favorite content.
 
 <div align="center">
-  <img src="#" width="720" align="center">
+  <img src="/public/images/site/feature-search.png" width="720" align="center">
+</div>
+
+### Newsletter
+
+Join our community by subscribing to our weekly newsletter.
+
+<div align="center">
+  <img src="/public/images/site/feature-newsletter.png" width="720" align="center">
+</div>
+
+### Member exclusive
+
+Create your own profile and get access to member exclusive features.
+
+<div align="center">
+  <img src="/public/images/site/feature-member-exclusive.png" width="720" align="center">
 </div>
 
 <br />
@@ -121,27 +143,34 @@ FEATURE 2 DESCRIPTION
 - [x] Frontend
 
   - [x] Ideation
-  - [x] Wireframing
+  - [x] Design sketching
   - [x] Design system
-  - [x] Prototyping
-  - [x] Build Structure: Pages & Routes
-  - [x] Build React Components
-  - [x] Add Google Maps
-  - [x] Add Authorization
+  - [x] Set up main pages: homepage; contact page; all posts page; post detail page
+  - [x] General layout: Build main navigation and logo components; add basic styling.
+  - [x] Homepage: Build homepage components and homepage layout; add styling.
+  - [x] Post layout and components: Build general posts layout component and post item component.
+  - [x] Contact page \*for users to send message
 
 - [x] Backend
 
-  - [x] Build a REST API
-  - [x] Create Database
-  - [x] Connect React to Backend
-  - [x] Add file upload
-  - [x] Add Authentication and Authorization
+  - [x] Work with Markdown files \*posts content
+  - [x] Prepare for handling incoming user data: setup MongoDB
+  - [x] Work on `/api/contact` API route
+  - [x] Feature: Newsletter Registration \*including FE
+  - [x] Feature: Comments \*including FE
+  - [x] Feature: Authentication \*including FE
+  - [x] Feature: Search & filter \*including FE
+
+- [x] Optimization
+
+  - [x] Set Head meta data for all pages
+  - [x] Add Global notification for better UX
 
 - [x] Deployment
+
   - [x] Set up Environment variables for both FE & BE
   - [x] API keys & credentials
-  - [x] Deploy REST API
-  - [x] Deploy React SPA
+  - [x] Deploy through Vercel
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
@@ -177,16 +206,12 @@ Licensed under the [MIT License](LICENSE)
 
 <!-- Built with -->
 
-[react-shield]: https://img.shields.io/static/v1?label=React&message=v17.0.2&color=blue&style=flat-square
+[next-shield]: https://img.shields.io/static/v1?label=Next&message=v10.0.6&color=lightgrey&style=flat-square
+[next-url]: https://nextjs.org/
+[react-shield]: https://img.shields.io/static/v1?label=React&message=v17.0.1&color=blue&style=flat-square
 [react-url]: https://reactjs.org/
-[node-shield]: https://img.shields.io/static/v1?label=Node&message=v14.17.4&color=green&style=flat-square
-[node-url]: https://nodejs.org/
-[express-shield]: https://img.shields.io/static/v1?label=Express&message=v4.17.1&color=lightgrey&style=flat-square
-[express-url]: https://expressjs.com/
-[axios-shield]: https://img.shields.io/static/v1?label=Axios&message=v0.24.0&color=purple&style=flat-square
-[axios-url]: https://axios-http.com/
-[mongoose-shield]: https://img.shields.io/static/v1?label=Mongoose&message=v6.0.14&color=brightgreen&style=flat-square
-[mongoose-url]: https://mongoosejs.com/
+[mongodb-shield]: https://img.shields.io/static/v1?label=MongoDB&message=v4.3.0&color=brightgreen&style=flat-square
+[mongodb-url]: https://www.mongodb.com/
 
 <!-- General -->
 
