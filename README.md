@@ -74,11 +74,11 @@
 </div>
 <br />
 
-#### WHAT IS THE GOAL
+#### What is the goal
 
 Help people to grow a positive mindset and live a better life by sharing design and psychology knowledge.
 
-#### WHAT WE BELIEVE
+#### What we believe
 
 **Share** share the latest findings, new design trends and interesting storied in tech.
 
