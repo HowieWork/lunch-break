@@ -13,12 +13,8 @@ const MainNavigation = () => {
     setIsDrawerOpen((prevState) => !prevState);
   };
 
-  const clickHandler = () => {
-    console.log('CLICKED!!!');
-  };
-
   return (
-    <header className={classes.container} onClick={clickHandler}>
+    <header className={classes.container}>
       {/* 1. NON-SIDE-DRAWER NAVIGATION */}
       <div className={classes['non-slide-nav']}>
         <NavLinks />
