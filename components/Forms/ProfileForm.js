@@ -13,11 +13,11 @@ const sendUpdatedPasswordData = async (passwordData) => {
     body: JSON.stringify(passwordData),
   });
 
+  const data = await response.json();
+
   if (!response.ok) {
     throw new Error(data.message || 'Something went wrong.');
   }
-
-  const data = await response.json();
 
   return data;
 };
