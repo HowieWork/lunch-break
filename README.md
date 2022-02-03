@@ -216,7 +216,7 @@ Licensed under the [MIT License](LICENSE)
 <!-- General -->
 
 [last-commit-shield]: https://img.shields.io/github/last-commit/howiework/lunch-break?style=flat-square
-[license-shield]: https://img.shields.io/github/license/howiework/snap-app?style=flat-square
-[license-url]: https://github.com/HowieWork/snap-app/blob/gh-pages/LICENSE
+[license-shield]: https://img.shields.io/github/license/howiework/lunch-break?style=flat-square
+[license-url]: https://github.com/HowieWork/lunch-break/blob/gh-pages/LICENSE
 [twitter-shield]: https://img.shields.io/twitter/follow/howiework?label=Follow%20%40howiework&logo=Twitter&style=flat-square
 [twitter-url]: https://twitter.com/howiework
