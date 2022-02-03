@@ -72,6 +72,11 @@
   <img src="/public/images/site/app-lunch-break-cover-light.webp" width="360" alt="APP SCREENSHOT LIGHT">
   <img src="/public/images/site/app-lunch-break-cover-dark.webp" width="360" alt="APP SCREENSHOT DARK">
 </div>
+
+<div align="center">
+  <a href="https://youtu.be/jIDyerwpAXw" target="_blank">Video Demo</a>
+</div>
+
 <br />
 
 #### What is the goal
