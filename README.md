@@ -91,6 +91,10 @@ Help people to grow a positive mindset and live a better life by sharing design 
 
 **Diversity** there has never been an era like today, and we have to process tremendous information and countless tasks. Diverse ways of thinking is crucial to reduce pressure in daily life.
 
+#### Story behind LunchBreak
+
+The idea of creating LunchBreak starts with my observation while working as an architectural designer. I realize bring aesthetics into people's life is only a part of designer's responsibilities. Convey design ideas and why we implement that way are issues needs designers' attention as well. [Read the full story.](https://www.howiework.com/posts/lunch-break)
+
 <br />
 
 ### Built with
