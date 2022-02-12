@@ -37,8 +37,6 @@ export default NextAuth({
 
         client.close();
 
-        // NOTE RETURNED OBJECT WILL LET NEXT KNOW AUTHORIZATION IS SUCCESSFUL. AND RETURNED OBJECT LATER WILL BE ENCODED INTO JWT
-        // TODO ADD NAME?
         return { email: user.email, name: user.name };
       },
     }),

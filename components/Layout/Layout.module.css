@@ -18,7 +18,6 @@
   z-index: -1;
 }
 
-/* TODO RESPONSIVENESS */
 @media (max-width: 80em) {
   .main-container {
     width: 72vw;

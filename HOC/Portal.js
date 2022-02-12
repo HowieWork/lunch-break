@@ -22,29 +22,3 @@ const Portal = (props) => {
 };
 
 export default Portal;
-
-// NOTE TODO AN ALTERNATIVE WOULD BE CREATING A CUSTOM HOOK
-/*
-function useHasMounted() {
-  const [hasMounted, setHasMounted] = React.useState(false);
-  React.useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  return hasMounted;
-}
-*/
-/*
-import { useHasMounted } from './useHasMounted'
-import { createPortal } from "react-dom"
-
-const Portal= ({ children }) => {
-  const mounted = useHasMounted();
-
-  return mounted
-      ? createPortal(children, 
-        document.querySelector("#myportal"))
-      : null
-}
-
-export default Portal
-*/

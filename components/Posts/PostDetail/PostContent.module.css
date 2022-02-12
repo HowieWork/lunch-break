@@ -1,20 +1,6 @@
 .container {
-  /* TODO IF ADD SIDE BAR FEATURE */
-  /* display: flex;
-  justify-content: space-between;
-  gap: 2.4rem; */
-
   margin-bottom: var(--gap--normal);
 }
-
-/* TODO ADD SIDE BAR FEATURE */
-
-/* .side-bar-container {
-  width: 8%;
-  height: auto;
-  outline: solid 1px var(--font-color);
-  border-radius: 0.6rem;
-} */
 
 .post-container {
   width: 78%;

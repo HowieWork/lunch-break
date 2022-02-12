@@ -35,7 +35,6 @@ const PostContent = (props) => {
 
     p(paragraph) {
       const { node } = paragraph;
-      // FIX CONSOLE WARNING: DIV CANNOT BE DESCENDENT OF P
       if (node.children[0].tagName === 'img') {
         const image = node.children[0];
 
@@ -70,9 +69,6 @@ const PostContent = (props) => {
 
   return (
     <section className={classes['container']}>
-      {/* TODO ADD READING STATUS FEATURE */}
-      {/* <aside className={classes['side-bar-container']}>STATUS | SOCIAL SHARE</aside> */}
-
       <article className={classes['post-container']}>
         <PostHeader
           title={title}
