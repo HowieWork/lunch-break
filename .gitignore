@@ -34,6 +34,3 @@ next.config.js
 
 # vercel
 .vercel
-
-# file for filter-repo to replace sensitive data
-expression.txt
