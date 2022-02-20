@@ -38,8 +38,4 @@ Going back to the concept of "time management", in a nutshell, using strategies 
 3. Start with the hard things
    In "time management", we can't shy away from the important: from the beginning of dealing with simple things, although there is accumulation in "quantity", we cannot guarantee that we will have enough energy to deal with difficult things later. Therefore, doing the hardest things when you have the most energy is not only easier to handle, but also gives you a greater sense of accomplishment.
 
-4. [Improve reading speed](FIXMESOMELINK)
-
-5. [Training memory ability](FIXMESOMELINK)
-
 3) Improve memory (expand wisdom; balance food and drink intake; maintain physical activity; increase antioxidant intake; learn memory skills; create related phrases or rhymes; get enough sleep; concentrate; convert important facts into a form that will help you remember; don't take memory skills too seriously)

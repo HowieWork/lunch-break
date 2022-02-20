@@ -13,10 +13,10 @@ Abstract: In this article Ro will take you to continue to discuss "time manageme
 The concept of "time management", in a nutshell, uses strategies and techniques to help people get work done and achieve goals.
 In this article, Ro will take you to continue to discuss "time management", we will know the two enemies of "time management" and a solution.
 
-## The Enemy of Time Management: Procrastination [Image]
+## The Enemy of Time Management: Procrastination
 
 Procrastination stems from a very powerful physical law: inertia
-(Objects tend to stay put, people do the same / keep moving objects moving, repel resistance, beneficiary) [Image]
+(Objects tend to stay put, people do the same / keep moving objects moving, repel resistance, beneficiary)  
 Procrastination hurts only myself, because no one really cares how my life goes, except myself.
 Strategy
 
@@ -25,7 +25,7 @@ Strategy
 3.  Teach your mind (consciousness) to recognize the first signs of laziness or procrastination;
 4.  Insist on taking notes in a certain way
 
-## The Enemy of Procrastination: The Perseverance [Image]
+## The Enemy of Procrastination: The Perseverance
 
 Resilience is a skill that can be developed. People who develop strong mental strength are more likely to follow a schedule/plan; make the right choices; maintain good focus; and thus beat procrastination.
 How to cultivate perseverance?
@@ -34,14 +34,14 @@ How to cultivate perseverance?
 2. Like anything else, thought is a tangible object that can be controlled: absorption/expulsion;
 3. Your brain can only process one dominant thought at a time, learn to divert your thoughts - turn your thoughts into powerful positive images or thoughts, try to focus on the positive thoughts, and the negative thoughts will be replaced.
 
-## The enemy of time management: clutter [picture]
+## The enemy of time management: clutter
 
 Clutter causes emotional stress; leads to inaction; reduces productivity
 
 Ro is here to recommend a book "Just Do It: The Art of Stress-Free Work". Written by David Allen, one of America's foremost thinkers in time management and productivity.
 The book states: "The short-term memory portion of your consciousness—the one that holds all the incomplete, pending, and disorganized 'stuff'—functions like the memory of a personal computer. The capacity of the memory is limited, there's only so much 'stuff' you can store there and still keep running efficiently. Most people's memory is overloaded. They're always distracted, their attention is always Inability to concentrate due to internal mental overload."
 
-## "Heart Like Water" [picture]
+## "Heart Like Water"
 
 1. Make your work area more attractive and equipped with everything you need for your work. You should allow yourself to enjoy being in your work area. Everything you want and need should be within easy reach and at your fingertips.
 2. Create a file system. Having all the material on a particular topic in one place (within a folder) is a huge step towards better time management and organization.
@@ -51,7 +51,7 @@ The book states: "The short-term memory portion of your consciousness—the one 
 
 ## A solution
 
-Know the plan --> Make a task list [picture]
+Know the plan --> Make a task list
 
 ### Recognize the importance of planning
 
@@ -60,14 +60,14 @@ Know the plan --> Make a task list [picture]
    What do I want to accomplish today?
    How much time do I have to do these things?
    Can I do some work that is not important to me and do it at other times?
-   Is there a logical order between the work I need to get done? 【picture】
+   Is there a logical order between the work I need to get done?
 3. Learn to do things in batches: As you plan each day's work, you can group things together at the same time or in the same place or in the same way.
-   "Take time to think, but when the time to act comes, stop thinking and start attacking" Napoleon [Picture]
+   "Take time to think, but when the time to act comes, stop thinking and start attacking" Napoleon
 
 ### Make a to-do list
 
 A to-do list is a physical product that reflects all your planning and preparation.
-David Allen, "One way to develop a peaceful mind is to build a system of information gathering and processing" [image]
+David Allen, "One way to develop a peaceful mind is to build a system of information gathering and processing"  
 A to-do list is like a system through which you can manage almost everything you need along the way in one place.
 
 Here Ro would like to recommend another book "The Power of Time: A Mature Mechanism That Allows You to Get More Done" by Brian Tracy.
