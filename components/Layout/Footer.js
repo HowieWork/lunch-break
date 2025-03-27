@@ -1,9 +1,9 @@
-import { useContext } from 'react';
-import { MdOutlineLightMode, MdDarkMode } from 'react-icons/md';
+import { useContext } from "react";
+import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
 
-import ThemeContext from '../../store/theme-context';
+import ThemeContext from "../../store/theme-context";
 
-import classes from './Footer.module.css';
+import classes from "./Footer.module.css";
 
 const Footer = () => {
   const themeCtx = useContext(ThemeContext);
@@ -11,7 +11,10 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      © Made by Howie Wang, 2022{' '}
+      © Made by{" "}
+      <a target="_blank" href="https://www.howiework.com/">
+        Howiework
+      </a>{" "}
       <div onClick={toggleDarkTheme}>
         {isDarkTheme && <MdOutlineLightMode />}
         {!isDarkTheme && <MdDarkMode />}
